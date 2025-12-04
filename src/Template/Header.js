@@ -1,16 +1,16 @@
 const Header = () => {
   const view = `
-    <header class="Header-main" id="header">
+    <header class="Header-main">
         <div class="logo">
-          <a href="#">Porfolio</a>
+          <a href="#/">Porfolio</a>
         </div>
-        <div class="Header-nav">
-            <a href="/" class="active">Home</a>
+        <nav class="Header-nav">
+            <a href="#/" class="active">Home</a>
             <a href="#/about" >About</a>
             <a href="#/skill" >Skill</a>
-            <a href="#" >Porfolio</a>
-            <a href="#" >Contact</a>
-        </div>
+            <a href="#/porfolio" >Porfolio</a>
+            <a href="#/contact" >Contact</a>
+        </nav>
     </header>
     `;
   return view;

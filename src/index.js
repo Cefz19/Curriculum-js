@@ -1,2 +1,5 @@
-import "./style/SCSS/main.scss"
-console.log('Hello World!');
+import './style/SCSS/main.scss';
+import router from './routes';
+
+window.addEventListener('load', router);
+window.addEventListener('hashchange', router);
