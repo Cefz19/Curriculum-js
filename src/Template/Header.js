@@ -4,7 +4,7 @@ const Header = () => {
         <div class="logo">
           <a href="#/">Porfolio</a>
         </div>
-        <nav class="Header-nav">
+        <nav class="navbar">
             <a href="#/" class="active">Home</a>
             <a href="#/about" >About</a>
             <a href="#/skill" >Skill</a>

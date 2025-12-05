@@ -1,0 +1,44 @@
+/* _reset.scss */
+
+/* Elimina márgenes y paddings por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    color: #ededed;
+    background-color: #0f010d;
+}
+
+/* Quita estilos de listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Quita estilos de enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Quita estilos de imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Quita estilos de encabezados */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+/* Quita estilos de botones */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

@@ -2,7 +2,7 @@ const About = () => {
     const view = `
         <section class="about" id="about">
             <div class="about-img">
-                <img src="./asses/resources/Cesar.png" alt="My photo">
+                <img src="/assets/Cesar.png" alt="My photo">
             </div>
             <div class="about-text">
                 <h2>About<span>Me</span></h2>

@@ -1,5 +1,7 @@
-import './style/SCSS/main.scss';
-import router from './routes';
+import router from "./routes";
+import "./style/SCSS/main.scss";
 
-window.addEventListener('load', router);
-window.addEventListener('hashchange', router);
+
+
+window.addEventListener("load", router);
+window.addEventListener("hashchange", router);

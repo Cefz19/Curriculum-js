@@ -1,6 +1,6 @@
 const Home = () => {
   const view = `
-    <section class="Home" id="home">
+    <section class="home-container" id="home">
         <div class="home-content">
             <h3>Hello, It´s Me</h3>
             <h1>Cesar Zendejas Torres</h1>
