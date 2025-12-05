@@ -4,10 +4,10 @@ import About from './About';
 const Layout = () => {
     const view = `
     <main>
-        <section class="home-main">
+        <section id="home" class="home-main">
             ${Home()}
         </section>
-        <section>
+        <section id="about">
             ${About()}
         </section>
     </main>
