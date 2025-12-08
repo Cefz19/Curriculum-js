@@ -1,29 +1,40 @@
 const Home = () => {
   const view = `
-    <section class="home-container" id="home">
-        <div class="home-content">
-            <h3>Hello, It´s Me</h3>
-            <h1>Cesar Zendejas Torres</h1>
-            <h3>And I´m a <span class="text"></span></h3>
-            <p>I´m a Computer Systems Engineer with extensive experience for over 3 years
-                <br>Expertise is to create and webiste desing
-            </p>
-            <div class="home-sci">
-                <a href="#" style="--i:6"><i class='bx bxl-facebook-circle'></i></a>
-                <a href="#" style="--i:7"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="#" style="--i:8"><i class='bx bxl-linkedin' ></i></a>
-                <a href="#" style="--i:9"><i class='bx bxl-github' ></i></a>
-            </div>
-            <a href="#" class="btn-box">More About Me</a>
-        </div>
-        <div class="home-img">
+    <section class="container" id="home">
 
-        </div>
+        <div class="home__content">
 
-        <span class="home-imghover"></span>
+          <div class="content-text">
+              <h2>Hello, It´s Me</h2>
+              <h1>Cesar Zendejas Torres</h1>
+              <h3>And I´m a <span class="text"></span></h3>
+              <p>I´m a Computer Systems Engineer <br> with extensive experience for over 3 years
+                  <br>Expertise is to create and webiste desing
+              </p>
+          </div>
+
+          <div class="home__soc-icon">
+              <a href="#" style="--i:6"><i class='bx bxl-facebook-circle'></i></a>
+              <a href="#" style="--i:7"><i class='bx bxl-instagram-alt'></i></a>
+              <a href="#" style="--i:8"><i class='bx bxl-linkedin' ></i></a>
+              <a href="#" style="--i:9"><i class='bx bxl-github' ></i></a>
+          </div>
+          
+          <div>
+              <a href="#" class="btn-box">More About Me</a>
+          </div>
+            
+        </div>
+        
+        <div class="home__img">
+
+      </div>
+          <span class="home-imghover"></span>
     </section>
     `;
   return view;
 };
 
 export default Home;
+
+

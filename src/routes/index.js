@@ -9,7 +9,7 @@ import resolveRoutes from '../utils/resolveRoutes';
 const routes = {
     '/home': Home,
     '/about': About,
-    '/:id': () => '<h2>Dynamic page</h2>',
+    // '/:id': () => '<h2>Dynamic page</h2>',
     // '/contact': Contact,
 };
 
@@ -27,8 +27,8 @@ const  router = async () => {
     let route = await resolveRoutes(hash);
     let render = routes[route] ? routes[route] : Error404;
 
-    const dynamicSection = document.getElementById('dynamic');
-    dynamicSection.innerHTML = await render();
+    // const dynamicSection = document.getElementById('dynamic');
+    // dynamicSection.innerHTML = await render();
     
     
 }
