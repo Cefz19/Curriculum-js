@@ -1,7 +1,8 @@
+import Layout from '../pages/Layout';
 import Header from '../template/Header';
 import Home from '../pages/Home';
 import About from '../pages/About';
-import Layout from '../pages/Layout';
+import Services from '../pages/Services';
 import Error404 from '../pages/Error404';
 import getHash from '../utils/getHash';
 import resolveRoutes from '../utils/resolveRoutes';
@@ -9,6 +10,7 @@ import resolveRoutes from '../utils/resolveRoutes';
 const routes = {
     '/home': Home,
     '/about': About,
+    '/services': Services,
     // '/:id': () => '<h2>Dynamic page</h2>',
     // '/contact': Contact,
 };

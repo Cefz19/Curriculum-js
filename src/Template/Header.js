@@ -1,14 +1,14 @@
 const Header = () => {
   const view = `
-    <header class="Header-main">
+    <header>
         <div class="logo">
           <a href="#/">Porfolio</a>
         </div>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about" >About</a>
+            <a href="#services" >Services</a>
             <a href="#skill" >Skill</a>
-            <a href="#porfolio" >Porfolio</a>
             <a href="#contact" >Contact</a>
         </nav>
     </header>

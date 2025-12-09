@@ -1,0 +1,93 @@
+@use '../animations/keyframe' as *;
+
+.services__main {
+    width: 100vw;
+    height: auto;
+    color: aliceblue;
+    font-size: 16px;
+    line-height: 1.5;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            text-align: center;
+
+            .sub-title {
+                font-size: 60px;
+                padding-bottom: 30px;
+
+                span {
+                    color: #0ef;
+                }
+            }
+        }
+
+        .card__list {
+            width: 85vw;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
+            gap: 30px;
+
+            .card {
+                background-color: transparent;
+                padding: 30px;
+                font-size: 13px;
+                border-right: 10px;
+                border-radius: 20px;
+                transition: background 0.5s, transform 0.5s;
+                box-shadow: 1px 1px 20px #012290f7,
+                    1px 1px 40px #0053b8f7;
+
+                i {
+                    font-size: 50px;
+                    margin-bottom: 10px;
+                }
+
+                h2 {
+                    font-size: 30px;
+                    font-weight: 500;
+                    margin-bottom: 15px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #00000000;
+                    font-size: 12px;
+                    margin-top: 20px;
+                    display: inline-block;
+                }
+
+                .read {
+                    display: inline-block;
+                    padding: 5px 25px;
+                    background: #0ef;
+                    border-radius: 12px;
+                    font-size: 18px;
+                    color: #1f2326;
+                    letter-spacing: 1.2px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    opacity: 0;
+                    animation: slideTop 1s ease forwards;
+                    animation-delay: 2s;
+                    box-shadow: 0 0 5px #0ef,
+                        0 0 25px #0ef;
+                }
+
+                .read:hover {
+                    box-shadow: 0 0 5px rgb(0, 201, 201),
+                        0 0 5px rgb(0, 201, 201), 0 0 20px rgb(0, 201, 201),
+                        0 0 70px rgb(0, 201, 201), 0 0 150px rgb(0, 201, 201);
+                }
+            }
+        }
+
+        .card__list div:hover {
+            transform: translateY(-10px);
+        }
+    }
+}

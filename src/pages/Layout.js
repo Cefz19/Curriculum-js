@@ -1,5 +1,6 @@
 import Home from './Home';
 import About from './About';
+import Services from './Services';
 
 const Layout = () => {
     const view = `
@@ -9,6 +10,9 @@ const Layout = () => {
         </section>
         <section id="about">
             ${About()}
+        </section>
+        <section id="services">
+            ${Services()}
         </section>
     </main>
     `
