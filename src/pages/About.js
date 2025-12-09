@@ -1,9 +1,11 @@
 const About = () => {
     const view = `
-        <section class="about" id="about">
-            <div class="about-img">
+        <section class="about__container" id="about">
+
+            <div class="container__img">
                 <img src="/assets/Cesar.png" alt="My photo">
             </div>
+
             <div class="about-text">
                 <h2>About<span>Me</span></h2>
                 <h4>Full Stack Developer!</h4>
@@ -11,6 +13,7 @@ const About = () => {
                 </p>
                 <a href="#" class="btn-box">More About Me</a>
             </div>
+
         </section>
     `
     return view;

@@ -1,14 +1,14 @@
-.about {
+.about__container {
+  width: 100vw;
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-}
-.about-container{
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
-.about-img img {
+.container__img img {
   margin: 0 230px;
   padding-bottom: 20%;
   max-width: 630px;
