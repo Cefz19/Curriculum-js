@@ -1,0 +1,176 @@
+@use '../animations/keyframe';
+
+// ===============================
+// CONTACT SECTION
+// ===============================
+.footer__contact {
+    width: 100vw;
+    margin-top: 23%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding-left: 60px;
+
+    .contact__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+
+            span {
+                color: #0ef;
+            }
+        }
+
+        h4 {
+            margin: 8px 0;
+            color: #e4e4e4;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        p {
+            color: #b1b1b1;
+            font-size: 20px;
+            line-height: 1.1;
+            margin-bottom: 0.8rem;
+        }
+
+        .contact__list {
+            li {
+                margin-bottom: 15px;
+                list-style: none;
+
+                i {
+                    color: #0ef;
+                    font-size: 20px;
+                    font-weight: 600;
+                    transition: transform 0.4s ease, color 0.4s ease;
+                }
+
+                &:hover i {
+                    transform: scale(1.2) translateY(-5px);
+                    color: #0ef;
+                }
+            }
+        }
+
+        .contact__icons {
+            a {
+                margin: 30px 10px;
+                text-decoration: none;
+
+                i {
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 40px;
+                    border: 2px solid #0ef;
+                    border-radius: 50%;
+                    font-size: 20px;
+                    color: #0ef;
+                    transition: 0.5s ease;
+                    opacity: 0;
+                    animation: slideLeft 1s ease forwards;
+                    animation-delay: calc(0.2s * var(--i));
+
+                    &:hover {
+                        background: #0ef;
+                        color: #000;
+                        box-shadow: 0 0 20px #0ef;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ===============================
+// FORM SECTION
+// ===============================
+.contact__form {
+    padding: 0 310px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: .8rem;
+
+        input,
+        textarea {
+            width: 60vw;
+            text-align: center;
+            border: none;
+            outline: none;
+            padding: 10px;
+            background: #e7cfb7;
+            color: #000;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 0.6rem;
+        }
+
+        textarea {
+            resize: none;
+            height: 150px;
+        }
+
+        .send {
+            align-self: center;
+            padding: 10px 80px;
+            background: #0ef;
+            border-radius: 12px;
+            font-size: 16px;
+            color: #081b29;
+            letter-spacing: 1px;
+            font-weight: bold;
+            cursor: pointer;
+            opacity: 0;
+            animation: slideTop 1s ease forwards;
+            animation-delay: 2s;
+            box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+
+            &:hover {
+                box-shadow:
+                    0 0 1.5px rgb(0, 201, 201),
+                    0 0 12px rgb(0, 201, 201),
+                    0 0 15px rgb(0, 201, 201),
+                    0 0 30px rgb(0, 201, 201);
+            }
+        }
+    }
+}
+
+// ===============================
+// FOOTER TEXT SECTION
+// ===============================
+.last__text {
+    p {
+        width: 100vw;
+        text-align: center;
+        padding: 13px 0;
+        background-color: rgb(7, 85, 91);
+        font-weight: bold;
+        margin-top: 30px;
+    }
+
+    .top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+
+        i {
+            color: #000;
+            background: rgb(107, 201, 208);
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 50%;
+        }
+    }
+}

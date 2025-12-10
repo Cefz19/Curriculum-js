@@ -1,8 +1,6 @@
 //reset
 @use './base/_reset';
 
-//layout
-@use './layout/main.scss';
 //components
 @use './compónents/header';
 @use './compónents/home';
@@ -10,3 +8,4 @@
 @use './compónents/services';
 @use './compónents/skill';
 @use './compónents/projects';
+@use './compónents/footer';

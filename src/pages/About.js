@@ -1,6 +1,6 @@
 const About = () => {
     const view = `
-        <section class="about__container" id="about">
+        <section class="about__container">
 
             <div class="wrapper">
                 <img src="/assets/Cesar.png" alt="My photo">

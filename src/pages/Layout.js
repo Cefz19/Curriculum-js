@@ -3,11 +3,11 @@ import About from './About';
 import Services from './Services';
 import Skill from './Skill';
 import Projects from './Projects';
+import Footer from './Footer';
 
 const Layout = () => {
     const view = `
-    <main>
-        <section id="home" class="home-main">
+        <section>
             ${Home()}
         </section>
         <section id="about">
@@ -22,7 +22,9 @@ const Layout = () => {
         <section id="projects">
             ${Projects()}
         </section>
-    </main>
+        <section id="contact">
+            ${Footer()}
+        </section>
     `
     return view;
 }

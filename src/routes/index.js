@@ -5,6 +5,7 @@ import About from '../pages/About';
 import Services from '../pages/Services';
 import Skill from '../pages/Skill';
 import Projects from '../pages/Projects';
+import Footer from '../pages/Footer';
 import Error404 from '../pages/Error404';
 import getHash from '../utils/getHash';
 import resolveRoutes from '../utils/resolveRoutes';
@@ -15,6 +16,7 @@ const routes = {
     '/services': Services,
     '/skill': Skill,
     '/projects': Projects,
+    '/contact': Footer,
     // '/:id': () => '<h2>Dynamic page</h2>',
     // '/contact': Contact,
 };
