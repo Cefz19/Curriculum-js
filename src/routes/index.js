@@ -4,6 +4,7 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Services from '../pages/Services';
 import Skill from '../pages/Skill';
+import Projects from '../pages/Projects';
 import Error404 from '../pages/Error404';
 import getHash from '../utils/getHash';
 import resolveRoutes from '../utils/resolveRoutes';
@@ -13,6 +14,7 @@ const routes = {
     '/about': About,
     '/services': Services,
     '/skill': Skill,
+    '/projects': Projects,
     // '/:id': () => '<h2>Dynamic page</h2>',
     // '/contact': Contact,
 };
@@ -30,6 +32,8 @@ const  router = async () => {
     let hash = getHash();
     let route = await resolveRoutes(hash);
     let render = routes[route] ? routes[route] : Error404;
+
+    
 
     // const dynamicSection = document.getElementById('dynamic');
     // dynamicSection.innerHTML = await render();

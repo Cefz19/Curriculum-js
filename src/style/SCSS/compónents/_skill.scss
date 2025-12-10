@@ -45,6 +45,22 @@
                 .bar {
                     font-size: 20px;
                     padding: 0 5px;
+
+                    i {
+                        padding-top: 15px;
+                    }
+
+                    .info {
+                        margin-bottom: 5px;
+
+                        span {
+                            font-size: 17px;
+                            padding: 0 10px;
+                            font-weight: bold;
+                            animation: showText 0.5 1s liner forwards;
+                            opacity: 0;
+                        }
+                    }
                 }
 
                 .bar:first-child {
@@ -55,23 +71,11 @@
                     margin-bottom: 0;
                 }
 
-                .bar i {
-                    padding-top: 15px;
-                }
 
-                .bar .info {
-                    margin-bottom: 5px;
-                }
 
-                .bar .info span {
-                    font-size: 17px;
-                    padding: 0 10px;
-                    font-weight: bold;
-                    animation: showText 0.5 1s liner forwards;
-                    opacity: 0;
-                }
 
-                .bar .progress-line {
+
+                .progress-line {
                     position: relative;
                     border-radius: 5px;
                     width: 80%;
@@ -80,17 +84,19 @@
                     animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
                     transform: scaleX(0);
                     transform-origin: left;
+
+                    span {
+                        height: 100%;
+                        background-color: #0ef;
+                        position: absolute;
+                        border-radius: 10px;
+                        animation: animate 0.5s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+                        transform: scaleX(0);
+                        transform-origin: left;
+                    }
                 }
 
-                .bar .progress-line span {
-                    height: 100%;
-                    background-color: #0ef;
-                    position: absolute;
-                    border-radius: 10px;
-                    animation: animate 0.5s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-                    transform: scaleX(0);
-                    transform-origin: left;
-                }
+
 
                 .progress-line.html span {
                     width: 90%;
@@ -176,133 +182,88 @@
             text-decoration: none;
             margin-bottom: 40px;
         }
+
+        .radial {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+
+            .radial-bar {
+                width: 35%;
+                height: 200px;
+                margin-bottom: 25px;
+                position: relative;
+
+                svg {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(-90deg);
+                    width: 90px;
+                    height: 130px;
+                }
+
+                .progress-bar {
+                    stroke-width: 10;
+                    stop-color: black;
+                    fill: transparent;
+                    stroke-dasharray: 502;
+                    stroke-dashoffset: 502;
+                    stroke-linecap: round;
+                    animation: animate-bar 1s linear forwards;
+                }
+
+                .path {
+                    stroke-width: 10;
+                    stroke: #0ef;
+                    fill: transparent;
+                    stroke-dasharray: 502;
+                    stroke-dashoffset: 502;
+                    stroke-linecap: round;
+                }
+
+                .path-1 {
+                    animation: animate-path1 1s 1s linear forwards
+                }
+
+                .path-2 {
+                    animation: animate-path2 1s 1s linear forwards
+                }
+
+                .path-3 {
+                    animation: animate-path3 1s 1s linear forwards
+                }
+
+                .path-4 {
+                    animation: animate-path4 1s 1s linear forwards
+                }
+
+                .percentage {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 17px;
+                    font-weight: 500;
+                    animation: showText 0.5 1s linear forwards;
+                    opacity: 0;
+                }
+
+                .text {
+                    width: 100%;
+                    position: absolute;
+                    text-align: start;
+                    left: 70%;
+                    transform: translateX(-30px);
+                    font-size: 17px;
+                    font-weight: bold;
+                    animation: showText 0.5 1s linear forwards;
+                    opacity: 0;
+                }
+            }
+        }
     }
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Radial */
-
-.radial-bars {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
-}
-
-.radial-bars .radial-bar {
-    width: 35%;
-    height: 200px;
-    margin-bottom: 25px;
-    position: relative;
-}
-
-.radial-bars .radial-bar svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    width: 90px;
-    height: 130px;
-}
-
-.radial-bars .radial-bar .progress-bar {
-    stroke-width: 10;
-    stop-color: black;
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
-    stroke-linecap: round;
-    animation: animate-bar 1s linear forwards;
-}
-
-@keyframes animate-bar {
-    100% {
-        stroke-dashoffset: -1;
-    }
-}
-
-.path {
-    stroke-width: 10;
-    stroke: #0ef;
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
-    stroke-linecap: round;
-}
-
-.path-1 {
-    animation: animate-path1 1s 1s linear forwards
-}
-
-.path-2 {
-    animation: animate-path2 1s 1s linear forwards
-}
-
-.path-3 {
-    animation: animate-path3 1s 1s linear forwards
-}
-
-.path-4 {
-    animation: animate-path4 1s 1s linear forwards
-}
-
-@keyframes animate-path1 {
-    100% {
-        stroke-dashoffset: 50;
-    }
-}
-
-@keyframes animate-path2 {
-    100% {
-        stroke-dashoffset: 175;
-    }
-}
-
-@keyframes animate-path3 {
-    100% {
-        stroke-dashoffset: 125;
-    }
-}
-
-@keyframes animate-path4 {
-    100% {
-        stroke-dashoffset: 75;
-    }
-}
-
-.radial-bar .percentage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5 1s linear forwards;
-    opacity: 0;
-}
-
-.radial-bar .text {
-    width: 100%;
-    position: absolute;
-    text-align: start;
-    left: 70%;
-    transform: translateX(-30px);
-    font-size: 17px;
-    font-weight: bold;
-    animation: showText 0.5 1s linear forwards;
-    opacity: 0;
 }

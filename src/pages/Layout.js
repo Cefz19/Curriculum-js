@@ -2,6 +2,7 @@ import Home from './Home';
 import About from './About';
 import Services from './Services';
 import Skill from './Skill';
+import Projects from './Projects';
 
 const Layout = () => {
     const view = `
@@ -17,6 +18,9 @@ const Layout = () => {
         </section>
         <section id="skill">
             ${Skill()}
+        </section>
+        <section id="projects">
+            ${Projects()}
         </section>
     </main>
     `
