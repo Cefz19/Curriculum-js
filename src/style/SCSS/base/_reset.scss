@@ -10,12 +10,17 @@
 }
 
 body {
-    color: #ededed;
-    background-color: #0f010d;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  color: #ededed;
+  background-color: #0f010d;
 }
 
 /* Quita estilos de listas */
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -24,4 +29,3 @@ a {
   text-decoration: none;
   color: inherit;
 }
-

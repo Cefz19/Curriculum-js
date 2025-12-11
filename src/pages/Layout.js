@@ -7,24 +7,26 @@ import Footer from './Footer';
 
 const Layout = () => {
     const view = `
-        <section>
-            ${Home()}
-        </section>
-        <section id="about">
-            ${About()}
-        </section>
-        <section id="services">
-            ${Services()}
-        </section>
-        <section id="skill">
-            ${Skill()}
-        </section>
-        <section id="projects">
-            ${Projects()}
-        </section>
-        <section id="contact">
+        <main>
+            <section class="item" id="home">
+                ${Home()}
+            </section>
+            <section class="item" id="about">
+                ${About()}
+            </section>
+            <section class="item" id="services">
+                ${Services()}
+            </section>
+            <section class="item" id="skill">
+                ${Skill()}
+            </section>
+            <section class="item" id="projects">
+                ${Projects()}
+            </section>
+        </main>
+        <footer id="contact">
             ${Footer()}
-        </section>
+        </footer>
     `
     return view;
 }

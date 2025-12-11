@@ -1,6 +1,6 @@
 const Services = () => {
     const view = `
-        <div class="services__main">
+        <section class="services__main">
 
             <div class="container">
                 
@@ -30,7 +30,7 @@ const Services = () => {
                 </div>
             </div>
 
-        </div>
+        </section>
     `
     return view;
 }

@@ -1,9 +1,9 @@
 const Header = () => {
   const view = `
     <header>
-        <div class="logo">
-          <a href="#/">Porfolio</a>
-        </div>
+        <section class="logo">
+          <a href="#/">Portfolio</a>
+        </section>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about" >About</a>

@@ -1,6 +1,9 @@
 //reset
 @use './base/_reset';
 
+//layout
+@use './layout/main.scss';
+
 //components
 @use './compónents/header';
 @use './compónents/home';

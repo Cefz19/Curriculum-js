@@ -4,8 +4,11 @@ const Projects = () => {
 
             <div class="portfolio">
                 <div class="content__text">
-
-                    <h2>Portfolio<span>Projects</span></h2>
+                
+                    <div>
+                        <h2>Portfolio<span>Projects</span></h2>
+                    </div>
+                    
 
                     <div class="portfolio__content">
                         <div class="row">
