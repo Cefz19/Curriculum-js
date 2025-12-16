@@ -6,3 +6,6 @@ main {
         height: 775px;
     }
 }
+.item-main {
+    grid-template-rows: repeat(auto-fill, minmax(350px, 1fr));
+}
