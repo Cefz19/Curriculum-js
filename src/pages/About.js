@@ -1,8 +1,9 @@
 const About = () => {
     const view = `
-        <section class="about__container">
+    <section class="about__container">
 
-            <div class="wrapper">
+        <div class="content">
+            <div class="wrapper__img">
                 <img src="/assets/Cesar.png" alt="My photo">
             </div>
 
@@ -14,8 +15,9 @@ const About = () => {
 
                 <a href="#" class="btn-box">More About Me</a>
             </div>
-
-        </section>
+        </div>
+            
+    </section>
     `
     return view;
 }

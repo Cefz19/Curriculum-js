@@ -58,36 +58,65 @@
     }
 }
 
-/* Radial */
 
-@keyframes animate-bar {
+
+
+
+@keyframes fillBar {
+    0% {
+        transform: scaleX(0);
+    }
+
     100% {
-        stroke-dashoffset: -1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
 
 
-@keyframes animate-path1 {
-    100% {
-        stroke-dashoffset: 50;
+@keyframes radialTrack {
+    from {
+        stroke-dashoffset: 502;
+    }
+
+    to {
+        stroke-dashoffset: var(--offset);
     }
 }
 
-@keyframes animate-path2 {
+
+@keyframes radialValue {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
     100% {
-        stroke-dashoffset: 175;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
     }
 }
 
-@keyframes animate-path3 {
-    100% {
-        stroke-dashoffset: 125;
+@keyframes radialText {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
     }
-}
 
-@keyframes animate-path4 {
     100% {
-        stroke-dashoffset: 75;
+        opacity: 1;
+        transform: translateY(0);
     }
 }
