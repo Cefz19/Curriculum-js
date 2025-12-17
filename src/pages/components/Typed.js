@@ -13,8 +13,8 @@ export default function initializeTyped() {
 
       new Typed(".text", {
         strings: ["Computer System Engineer", "Web Developer"],
-        typeSpeed: 100,
-        backSpeed: 60,
+        typeSpeed: 110,
+        backSpeed: 90,
         loop: true,
       });
     }

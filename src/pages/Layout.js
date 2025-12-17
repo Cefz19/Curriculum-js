@@ -1,13 +1,11 @@
 
 const Layout = () => {
     return `
-        <main class="item-main">
-            <section id="sections-container">
-            </section>
-
+        <main class="main__container">
+            <section id="sections-container"></section>
         </main>
-        <footer id="contact"></footer>
-    `
+        <footer class="footer__main item" id="contact"></footer>   
+        `
 };
 
 export default Layout;

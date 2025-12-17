@@ -40,31 +40,3 @@ const Home = () => {
 
 export default Home;
 
-class AtrrTyped {
-  initializedAtrributes() {
-    const attrs = this.constructor.observedeAttributes || [];
-    attrs.forEach((atrr) => {
-      this[atrr] = this.getAtrribute(atrr);
-    });
-  }
-
-  initializeTyped() {
-    const target = document.querySelector(".text");
-    if (target && window.Typed) {
-      new Typed(target, {
-        strings: ["Computer System Engineer", "Web Developer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true,
-      });
-    } else {
-      // Esperar a que el script se cargue
-      const checkTyped = setInterval(() => {
-        if (window.Typed && document.querySelector('.text')) {
-          clearInterval(checkTyped);
-          this.initializeTyped();
-        }
-      }, 100);
-    }
-  }
-}
