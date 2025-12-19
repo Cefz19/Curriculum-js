@@ -1,10 +1,9 @@
 const Home = () => {
   const view = `
-    <section class="container">
 
-        <div class="home__content">
+      <div class="home__content">
 
-          <div>
+        <div class="text__container">
             <div class="content-text">
                 <h2>Hello, It´s Me</h2>
                 <h1>Cesar Zendejas Torres</h1>
@@ -20,23 +19,20 @@ const Home = () => {
                 <a href="#" style="--i:8"><i class='bx bxl-linkedin' ></i></a>
                 <a href="#" style="--i:9"><i class='bx bxl-github' ></i></a>
             </div>
-          </div>
-          
-          <div>
+
+            <div>
               <a href="#" class="btn-box">More About Me</a>
-          </div>
-            
+            </div>
         </div>
+
         <div class="home__img">
           <span class="home-imghover"></span>
         </div>
 
       </div>
           
-    </section>
     `;
   return view;
 };
 
 export default Home;
-

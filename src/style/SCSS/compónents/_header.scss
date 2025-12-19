@@ -1,22 +1,22 @@
 @use '../animations/keyframe';
 
-header {
+.header__nav{
     position: fixed;
     top: 0;
-    width: 100%;
-    padding: 10px 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: radial-gradient(circle, rgba(74, 23, 55, 1) 0%, rgba(68, 26, 74, 1) 50%, rgba(23, 3, 5, 1) 100%);
+    width: 100%;
+    max-width: 1200px;
     display: grid;
-    grid-template-columns: repeat(auto, 2fr);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    grid-template-columns: 0.68fr 1fr;
+    justify-items: stretch;
     z-index: 100;
 
     .logo {
-        padding-left: 90px;
+        padding: .3em 5em;
         position: relative;
-        font-size: 25px;
+        font-size: 1.1em;
         color: #fff;
         text-decoration: none;
         font-weight: 500;
@@ -27,9 +27,9 @@ header {
 
     /* Nav Bar */
     .navbar a {
-        padding: 1.5px 28px;
+        padding: .4em 1.52em;
         display: inline-block;
-        font-size: 25px;
+        font-size: 1em;
         color: #fff;
         text-decoration: none;
         font-weight: 600;

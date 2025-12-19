@@ -1,6 +1,6 @@
 const Header = () => {
   const view = `
-    <header class="header__nav">
+    <div class="header__nav">
         <section class="logo">
           <a href="#/">Portfolio</a>
         </section>
@@ -12,7 +12,7 @@ const Header = () => {
             <a href="#projects" >Projects</a>
             <a href="#contact" >Contact</a>
         </nav>
-    </header>
+    </div>
     `;
   return view;
 };

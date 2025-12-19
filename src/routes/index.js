@@ -1,21 +1,21 @@
 import Layout from "../pages/Layout";
-import Header from "../template/Header";
-import Sections from "../pages/components/Sections";
+
+import initSectionAnimations from "../utils/sectionAnimations";
 import initializeTyped from "../pages/components/Typed";
 
 const router = () => {
-  const header = document.getElementById("header");
+
   const content = document.getElementById("content");
 
   // Renderizar header y layout completo
-  header.innerHTML = Header();
   content.innerHTML = Layout();
 
-  const sectionsContainer = document.getElementById("sections-container");
-  sectionsContainer.innerHTML = Sections();
+  // const sectionsContainer = document.getElementById("sections-container");
+  // sectionsContainer.innerHTML = Sections();
 
   // Inicializar Typed (ya existe .text en Home porque Layout lo insertó)
   initializeTyped();
+  initSectionAnimations();
 };
 
 export default router;

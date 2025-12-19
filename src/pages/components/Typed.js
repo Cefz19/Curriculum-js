@@ -12,10 +12,13 @@ export default function initializeTyped() {
       typedInitialized = true;
 
       new Typed(".text", {
-        strings: ["Computer System Engineer", "Web Developer"],
+        strings: ["Computer System Engineer^1000", "Web Developer^1000"],
         typeSpeed: 110,
-        backSpeed: 90,
+        backSpeed: 80,
         loop: true,
+        showCursor: true,
+        cursorChar: ".",
+        smartBackspace: true,
       });
     }
   };

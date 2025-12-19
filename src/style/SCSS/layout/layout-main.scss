@@ -1,13 +1,18 @@
-.main__container {
+ .main__container {
     display: grid;
 
-    grid-area:
-        "home" auto 
-        "about" auto 
-        "service" auto 
-        "skill" auto 
-        "project" auto 
+    grid-template-areas:
+        "home"  
+        "about"  
+        "service"  
+        "skill" 
+        "project" 
+        "contact"
         ;
+
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        padding-top: 2em;
 
     .item {
         width: 100%;

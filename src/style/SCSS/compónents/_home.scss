@@ -1,49 +1,59 @@
 @use '../animations/keyframe' as *;
 
-.container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
 
-    .home__content {
-        width: 40%;
+.home__content {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr .8fr;
+    justify-items: center;
+    margin: 0 auto;
+
+    .text__container {
+        width: 100%;
+        padding-left: 6em;
+        max-width: 1200px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        margin: 10px;
 
         .content-text {
             width: 100%;
             padding-bottom: 25px;
-        }
 
-        .content-text h1 {
-            padding: 0 0;
-            font-size: 30px;
-            font-weight: 700;
-            margin: 10px 0;
-            opacity: 0;
-            animation: slideRight 1s ease forwards;
-            animation-delay: 1s;
-        }
+            h1 {
+                padding: 0 0;
+                font-size: 30px;
+                font-weight: 700;
+                margin: 10px 0;
+                opacity: 0;
+                animation: slideRight 1s ease forwards;
+                animation-delay: 1s;
 
-        .content-text h2 {
-            font-size: 30px;
-            font-weight: 400;
-            opacity: 0;
-            animation: slideBottom 1s ease forwards;
-            animation-delay: 1.5s;
-        }
+            }
 
-        .content-text h3 {
-            padding-bottom: 10px;
-            font-size: 30px;
-            font-weight: 400;
-            opacity: 0;
-            animation: slideBottom 1s ease forwards;
-            animation-delay: 1.5s;
+            h2 {
+                font-size: 30px;
+                font-weight: 400;
+                opacity: 0;
+                animation: slideBottom 1s ease forwards;
+                animation-delay: 1.5s;
+            }
+
+            h3 {
+                padding-bottom: 1.3em;
+                font-size: 1.3em;
+                font-weight: 400;
+                opacity: 0;
+                animation: slideBottom 1s ease forwards;
+                animation-delay: 1.5s;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                opacity: 0;
+                animation: slideLeft 1s ease forwards;
+            }
         }
 
         /* Type-Speed */
@@ -57,13 +67,6 @@
 
         .content-text h3 span {
             color: #0ef;
-        }
-
-        .content-text p {
-            font-size: 18px;
-            font-weight: 400;
-            opacity: 0;
-            animation: slideLeft 1s ease forwards;
         }
 
         .home__soc-icon a {
@@ -114,18 +117,19 @@
         }
     }
 
-
     .home__img {
         width: 280px;
         height: 280px;
-        padding: 30px 80px;
+        padding: 0 3em;
         background-image: url(/public/assets/Cesar.png);
         background-size: cover;
         background-position: center;
         border: 4px solid rgb(60, 18, 45);
         border-radius: 60%;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        justify-items: end;
     }
+
+
 }
