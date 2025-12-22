@@ -1,4 +1,4 @@
-import Header from '../template/Header';
+import Header from '../Template/Header';
 import Sections from './components/Sections';
 const Layout = () => {
   return `
