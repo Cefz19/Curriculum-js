@@ -11,63 +11,42 @@
 
 html {
   scroll-behavior: smooth;
-  height: 100%;
+  scrollbar-gutter: stable; 
 }
 
 
 body {
   width: 100%;
   min-height: 100vh;
-  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  // Usar clamp para que la fuente no sea gigante en móviles
+  font-size: clamp(1rem, 1.2vw, 1.2rem); 
   color: #ededed;
   background-color: #0f010d;
+  line-height: 1.5;
+  overflow-x: hidden; // Vital para evitar scroll horizontal por animaciones
 }
 
 main {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  // Eliminamos los media queries que limitaban el ancho a 800px
+  // Ahora el contenedor crecerá orgánicamente hasta los 1200px
+  padding: 0 1.5rem; 
 
-  @media (min-width: 768px) {
-    max-width: 800px;
-  }
-
-  @media (min-width: 1024px) {
-    max-width: 1200px;
+  @media (min-width: 1200px) {
+    padding: 0; // Quitamos padding lateral cuando llegamos al máximo
   }
 }
 
 .typed-cursor {
-  font-weight: 100;
-  font-size: 1.2em;
-  color: #00ffcc;
-  /* o el color que prefieras */
-  animation: blink 0.7s infinite;
+  font-weight: 400;
+  color: #0ef; 
+  margin-left: 5px;
 }
 
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-
-/* Quita estilos de listas */
-ul,
-ol {
-  list-style: none;
-}
-
-/* Quita estilos de enlaces */
-a {
-  text-decoration: none;
-  color: inherit;
-}
+/* Utilidades globales */
+ul, ol { list-style: none; }
+a { text-decoration: none; color: inherit; cursor: pointer; }
+img { max-width: 100%; height: auto; display: block; }

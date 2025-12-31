@@ -1,52 +1,51 @@
- .main__container {
-    display: grid;
+.main__container {
+  display: grid;
 
-    grid-template-areas:
-        "home"  
-        "about"  
-        "service"  
-        "skill" 
-        "project" 
-        "contact"
-        ;
+  grid-template-areas:
+    "home"
+    "about"
+    "service"
+    "skill"
+    "project"
+    "contact";
 
-        grid-template-rows: auto;
-        grid-template-columns: 1fr;
-        padding-top: 2em;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto;
+  padding-top: clamp(3rem, 10vh, 6rem);
+  gap: 2rem;
 
-    .item {
-        width: 100%;
-        min-height: 39em;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  .item {
+    width: 100%;
+    min-height: 80vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    overflow: hidden; 
+  }
 
-    }
+  .home__item {
+    grid-area: home;
+  }
 
-    .home__item {
-        grid-area: home;
-    }
+  .about__item {
+    grid-area: about;
+  }
 
-    .about__item {
-        grid-area: about;
-    }
+  .service__item {
+    grid-area: service;
+  }
 
-    .service__item {
-        grid-area: service;
-    }
+  .skill__item {
+    grid-area: skill;
+  }
 
-    .skill__item {
-        grid-area: skill;
-    }
+  .project__item {
+    grid-area: project;
+  }
 
-    .project__item {
-        grid-area: project;
-    }
-
-    .contact__item {
-        grid-area: contact;
-    }
-
-
+  .contact__item {
+    grid-area: contact;
+  }
 }

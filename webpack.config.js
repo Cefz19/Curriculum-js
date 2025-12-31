@@ -19,12 +19,27 @@ module.exports = {
         use: { loader: "babel-loader" },
       },
       {
-        test: /\.scss$/,
+        test: /\.(s[ac]ss|css)$/i,
         use: [
-          MiniCssExtractPlugin.loader,
-          { loader: "css-loader" },
-          { loader: "sass-loader", options: { sourceMap: true } },
+          "style-loader", // Inyecta el CSS al DOM
+          "css-loader",   // Interpreta @import y url()
+          "sass-loader",  // Compila Sass a CSS
         ],
+      },
+      // Regla para manejar las fuentes de Boxicons (Webpack 5)
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext][query]'
+        },
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource', // Webpack 5 gestiona esto automáticamente
+        generator: {
+          filename: 'assets/images/[name][ext]' // Cómo se guardará en la carpeta dist
+        }
       },
     ],
   },

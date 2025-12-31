@@ -1,3 +1,6 @@
+import ServiceCard from "./components/molecules/ServiceCard";
+import { ServiceData } from "../data/services/ServiceData";
+
 const Services = () => {
     const view = `
         <section class="services__main">
@@ -7,24 +10,13 @@ const Services = () => {
             </div>
 
             <div class="card__list">
-                <div class="card">
-                    <i class='bx bx-code' style='color:rgba(36,220,237,0.74)'></i>
-                    <h2>UI/UX Desing</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro iste provident dolorem eaque alias pariatur?</p>
-                    <a href="#" class="read">Learm More</a>
-                </div>
-                <div class="card">
-                    <i class='bx bx-code' style='color:rgba(36,220,237,0.74)'></i>
-                    <h2>UI/UX Desing</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro iste provident dolorem eaque alias pariatur?</p>
-                    <a href="#" class="read">Learm More</a>
-                </div>
-                <div class="card">
-                    <i class='bx bx-code' style='color:rgba(36,220,237,0.74)'></i>
-                    <h2>UI/UX Desing</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro iste provident dolorem eaque alias pariatur?</p>
-                    <a href="#" class="read">Learm More</a>
-                </div>
+                ${ServiceData.length > 0 
+                    ? ServiceData.map(service => ServiceCard(
+                    service.title,
+                    service.description,
+                    service.icon,
+                    service.color
+                )).join('') : '<p>No data loaded</p>'}
             </div>
 
         </section>

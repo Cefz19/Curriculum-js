@@ -4,17 +4,16 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
+    padding: 2rem 1.5rem; // Asegura que no toque los bordes en móvil
 
     .title {
         text-align: center;
+        margin-bottom: 2rem;
 
         .sub-title {
-            margin-top: .5em;
-            margin-bottom: .9em;
-            font-size: 3.5rem;
+            // Tamaño fluido: pequeño en móvil, grande en desktop
+            font-size: clamp(2.2rem, 5vw, 3.5rem); 
+            line-height: 1.2;
 
             span {
                 color: #0ef;
@@ -25,69 +24,77 @@
     .card__list {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2.5em;
-        padding: 4em 2em;
+        // Solución definitiva para desbordamiento en móviles (Uso de min())
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+        gap: 2rem;
+        padding: 2rem 0;
 
         .card {
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            display: block;
-            background-color: transparent;
-            padding: 2.2em;
-            font-size: 1.1rem;
-            border-radius: 1.3em;
-            transition: background 0.5s, transform 0.5s;
-            box-shadow: 1px 1px 20px #012290f7,
-                1px 1px 40px #0053b8f7;
+            background-color: #030b1a; // Fondo sutil para destacar el contenido
+            padding: 2.5rem 1.8rem;
+            border-radius: 1.5rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(34, 51, 66, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
 
             i {
-                font-size: 3rem;
-                margin-bottom: .6em;
+                font-size: 3.5rem;
+                color: #0ef;
+                margin-bottom: 1rem;
+                // Efecto de brillo suave en el icono
+                text-shadow: 0 0 15px rgba(0, 238, 255, 0.4);
             }
 
             h2 {
-                font-size: 1.8rem;
-                font-weight: 500;
-                margin-bottom: .8em;
+                font-size: 1.6rem;
+                font-weight: 600;
+                margin-bottom: 1rem;
+                color: #fff;
             }
 
-            a {
-                text-decoration: none;
-                color: #00000000;
-                font-size: 2rem;
-                margin-top: 1.7em;
-                display: inline-block;
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+                color: #ccc;
+                margin-bottom: 2rem;
             }
 
             .read {
                 display: inline-block;
-                padding: .4em 1.2em;
+                padding: 0.7rem 1.5rem;
                 background: #0ef;
-                border-radius: .7em;
-                font-size: 1.05rem;
-                color: #1f2326;
-                letter-spacing: .1em;
+                border-radius: 0.8rem;
+                font-size: 0.95rem;
+                color: #081b29;
                 text-decoration: none;
-                font-weight: bold;
+                font-weight: 700;
+                transition: all 0.3s ease;
+                box-shadow: 0 0 15px rgba(0, 238, 255, 0.3);
+
+                // Animación (opcional si ya la manejas por JS o al cargar)
                 opacity: 0;
-                animation: slideTop 1s ease forwards;
-                animation-delay: 2s;
-                box-shadow: 0 0 5px #0ef,
-                    0 0 25px #0ef;
+                animation: slideTop 0.8s ease forwards;
+                animation-delay: 0.3s;
+
+                &:hover {
+                    transform: scale(1.05);
+                    background: #fff;
+                    box-shadow: 0 0 25px #0ef;
+                }
             }
 
-            .read:hover {
-                box-shadow: 0 0 5px rgb(0, 201, 201),
-                    0 0 5px rgb(0, 201, 201), 0 0 20px rgb(0, 201, 201),
-                    0 0 70px rgb(0, 201, 201), 0 0 150px rgb(0, 201, 201);
+            // Efecto Hover en la tarjeta
+            &:hover {
+                transform: translateY(-12px);
+                background: #1a1a1a;
+                box-shadow: 0 15px 40px rgba(0, 238, 255, 0.15);
+                
+                i {
+                    transform: rotateY(10deg);
+                }
             }
         }
-    }
-
-    .card__list div:hover {
-        transform: translateY(-10px);
     }
 }

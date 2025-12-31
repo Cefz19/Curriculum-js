@@ -1,44 +1,62 @@
 @use '../animations/keyframe';
 
-.header__nav{
+.header__nav {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: radial-gradient(circle, rgba(74, 23, 55, 1) 0%, rgba(68, 26, 74, 1) 50%, rgba(23, 3, 5, 1) 100%);
+    
+    // Mejoramos el ancho y fondo
     width: 100%;
     max-width: 1200px;
+    background: rgba(23, 3, 5, 0.9); // Añadimos transparencia para un look moderno
+    backdrop-filter: blur(10px);    // Efecto cristal (Glassmorphism)
+    
+    // Grid flexible para evitar roturas
     display: grid;
-    grid-template-columns: 0.68fr 1fr;
-    justify-items: stretch;
-    z-index: 100;
+    grid-template-columns: minmax(auto, 1fr) auto; 
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    z-index: 1000;
 
     .logo {
-        padding: .3em 5em;
-        position: relative;
-        font-size: 1.1em;
+        font-size: 1.5rem;
         color: #fff;
         text-decoration: none;
-        font-weight: 500;
-        cursor: pointer;
+        font-weight: 700;
         opacity: 0;
         animation: slideRight 1.3s ease forwards;
+        
+        // Evitamos el padding excesivo que rompe el grid en móvil
+        padding: 0.5rem 0;
     }
 
-    /* Nav Bar */
-    .navbar a {
-        padding: .4em 1em;
-        display: inline-block;
-        font-size: 1em;
-        color: #fff;
-        text-decoration: none;
-        font-weight: 600;
-        transition: .3s;
-        opacity: 0;
-        animation: slideTop 1.3s ease forwards;
+    .navbar {
+        display: flex;
+        gap: 0.5rem;
+
+        a {
+            padding: 0.5rem 1rem;
+            font-size: 0.95rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            opacity: 0;
+            animation: slideTop 1.3s ease forwards;
+
+            &:hover {
+                color: #0ef;
+            }
+        }
     }
 
-    .navbar a:hover {
-        color: #0ef;
+    // Media Query para móviles: ocultar navbar o apilar
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        .navbar {
+            display: none; // Aquí podrías implementar un menú hamburguesa
+        }
     }
 }

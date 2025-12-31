@@ -1,3 +1,5 @@
+import ProjectImg from '../assets/Neo.png';
+
 const Projects = () => {
   const view = `
 
@@ -10,7 +12,7 @@ const Projects = () => {
         <div class="portfolio__content">
 
             <div class="row">
-                <img src="/assets/Neo.png" alt="Design UX/IU with blue background">
+                <img src="${ProjectImg}" alt="Design UX/IU with blue background">
                     <div class="layer">
                         <h5>UI/UX Desing</h5>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque unde excepturi autem, eius ratione est a tempore ullam ab iusto vitae ipsam, libero deserunt non fuga ex recusandae hic commodi?</p>
@@ -20,7 +22,7 @@ const Projects = () => {
             </div>
 
             <div class="row">
-                <img src="/assets/Neo.png" alt="Design UX/IU with blue background">
+                <img src="${ProjectImg}" alt="Design UX/IU with blue background">
                     <div class="layer">
                         <h5>UI/UX Desing</h5>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque unde excepturi autem, eius ratione est a tempore ullam ab iusto vitae ipsam, libero deserunt non fuga ex recusandae hic commodi?</p>
@@ -30,7 +32,7 @@ const Projects = () => {
             </div>
 
             <div class="row">
-                <img src="/assets/Neo.png" alt="Design UX/IU with blue background">
+                <img src="${ProjectImg}" alt="Design UX/IU with blue background">
                     <div class="layer">
                         <h5>UI/UX Desing</h5>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque unde excepturi autem, eius ratione est a tempore ullam ab iusto vitae ipsam, libero deserunt non fuga ex recusandae hic commodi?</p>

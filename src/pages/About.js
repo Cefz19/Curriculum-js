@@ -1,10 +1,12 @@
+import CesarAbout from '../assets/Cesar.png';
+
 const About = () => {
     const view = `
     <section class="about__container">
 
         <div class="content">
             <div class="wrapper__img">
-                <img src="/assets/Cesar.png" alt="My photo">
+                <img src="${CesarAbout}" alt="My photo">
             </div>
 
             <div class="wrapper__text">
