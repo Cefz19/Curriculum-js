@@ -1,7 +1,6 @@
 import initializeTyped from "./pages/components/Typed";
 import router from "./routes";
 import "./style/SCSS/main.scss";
-import 'boxicons/css/boxicons.min.css';
 
 
 window.addEventListener("load", router);
@@ -11,3 +10,4 @@ window.addEventListener("hashchange", () => {
         initializeTyped();
     }
 });
+
