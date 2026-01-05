@@ -1,5 +1,5 @@
-import { SkillsData } from "../data/SkillsData";
-import { RadialData } from "../data/RadialData";
+import { SkillsData } from "../data/moleculesData/SkillsData";
+import { RadialData } from "../data/moleculesData/RadialData";
 import SkillCard from "./components/molecules/SkillCard";
 import RadialCard from "./components/molecules/RadialCard";
 

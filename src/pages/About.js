@@ -1,12 +1,12 @@
-import CesarAbout from '../assets/Cesar.png';
+import { images } from "../data/images/img";
 
 const About = () => {
-    const view = `
+  const view = `
     <section class="about__container">
 
         <div class="content">
             <div class="wrapper__img">
-                <img src="${CesarAbout}" alt="My photo">
+                <img src="${images[0].src}" alt="${images[0].alt}">
             </div>
 
             <div class="wrapper__text">
@@ -20,8 +20,8 @@ const About = () => {
         </div>
             
     </section>
-    `
-    return view;
-}
+    `;
+  return view;
+};
 
 export default About;

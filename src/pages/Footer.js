@@ -1,3 +1,8 @@
+import { IconsData } from '../data/atomData/IconsData';
+import { IconD } from '../data/atomData/iconD';
+import Icons from '../pages/components/atom/Icons';
+
+
 const Footer = () => {
   const view = `
     <div class="footer__container">
@@ -15,15 +20,16 @@ const Footer = () => {
             </div>     
 
             <div class="contact__list">
-                <li><i class="bx bxs-send">contact@gmail.com</i></li>
-                <li><i class="bx bxs-phone">1234556</i></li>
+                <li><i class="bx ${IconD[0].icon}">contact@gmail.com</i></li>
+                <li><i class="bx ${IconD[1].icon}">1234556</i></li>
             </div>
 
             <div class="contact__icons">
-                <a href="#"><i class="bx bxl-facebook-circle"></i></a>
-                <a href="#"><i class='bx bxs-x-circle'></i></a>
-                <a href="#"><i class="bx bxl-instagram"></i></a>
-                <a href="#"><i class="bx bxl-linkedin"></i></a>
+                ${IconsData.length > 0 
+                    ? IconsData.map(service => Icons(
+                    service.style,
+                    service.icon
+                )).join('') : '<p>No data loaded</p>'}
             </div>
         </section>
 
@@ -39,7 +45,7 @@ const Footer = () => {
 
         <section class="last__text">
             <p>Developer with love by Cesar Zendejas @2024</p>
-            <a href="#" class="top"><i class='bx bx-up-arrow-alt'></i></a>
+            <a href="#" class="top"><i class='bx ${IconD[2].icon}'></i></a>
         </section>
 
     </div>

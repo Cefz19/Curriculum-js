@@ -1,4 +1,5 @@
-import ProjectImg from '../assets/Neo.png';
+import { ProjectsData } from "../data/moleculesData/ProjectData";
+import ProjectsCard from "./components/molecules/ProjectsCard";
 
 const Projects = () => {
   const view = `
@@ -11,35 +12,20 @@ const Projects = () => {
         
         <div class="portfolio__content">
 
-            <div class="row">
-                <img src="${ProjectImg}" alt="Design UX/IU with blue background">
-                    <div class="layer">
-                        <h5>UI/UX Desing</h5>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque unde excepturi autem, eius ratione est a tempore ullam ab iusto vitae ipsam, libero deserunt non fuga ex recusandae hic commodi?</p>
-
-                        <a href="#"><i class='bx bx-link-external'></i></a>
-                    </div>
-            </div>
-
-            <div class="row">
-                <img src="${ProjectImg}" alt="Design UX/IU with blue background">
-                    <div class="layer">
-                        <h5>UI/UX Desing</h5>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque unde excepturi autem, eius ratione est a tempore ullam ab iusto vitae ipsam, libero deserunt non fuga ex recusandae hic commodi?</p>
-
-                        <a href="#"><i class='bx bx-link-external'></i></a>
-                    </div>
-            </div>
-
-            <div class="row">
-                <img src="${ProjectImg}" alt="Design UX/IU with blue background">
-                    <div class="layer">
-                        <h5>UI/UX Desing</h5>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque unde excepturi autem, eius ratione est a tempore ullam ab iusto vitae ipsam, libero deserunt non fuga ex recusandae hic commodi?</p>
-
-                        <a href="#"><i class='bx bx-link-external'></i></a>
-                    </div>
-            </div>
+            
+                ${
+                  ProjectsData.length > 0
+                    ? ProjectsData.map((service) =>
+                        ProjectsCard(
+                          service.src,
+                          service.atl,
+                          service.title,
+                          service.description,
+                          service.icon
+                        )
+                      ).join("")
+                    : "<p>No data loaded</p>"
+                }
 
         </div>
     </div>

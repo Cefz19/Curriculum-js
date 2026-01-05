@@ -1,5 +1,5 @@
 import ServiceCard from "./components/molecules/ServiceCard";
-import { ServiceData } from '../data/ServiceData';
+import { ServiceData } from '../data/moleculesData/ServiceData';
 
 const Services = () => {
     const view = `
