@@ -1,8 +1,9 @@
+import PorfolioPDF  from '../pages/docs/PorfolioPDF';
 const Header = () => {
   const view = `
     <div class="header__nav">
         <section class="logo">
-          <a href="#/">Portfolio</a>
+          <a href="#pdf">Portfolio</a>
         </section>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>

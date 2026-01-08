@@ -1,9 +1,12 @@
-const PorfolioPDF = () => {
+const PorfolioPDF = (atitle, title, src) => {
     return `
-        <section class="container">
-            <button class="btn btn-primary" id="download">Download PDF</button>
+        <section class="container pdf-page">
+        <div class="pdf-controls">
+            <a href="#home" class="btn btn-secondary">${atitle}</a>
+            <button class="btn btn-primary" id="download">${title}</button>
+        </div>
             <div class="card"> 
-                <iframe src="./SAT.pdf" width="650px" height="800px"></iframe> 
+                <iframe src="${src}" width="650px" height="800px"></iframe> 
             </div>
         </section>
     `;

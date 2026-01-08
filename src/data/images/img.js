@@ -1,5 +1,5 @@
-import MainCesar from '../../assets/Cesar.png';
-import Neo from '../../assets/Neo.png';
+import MainCesar from '../../assets/imgs/Cesar.png';
+import Neo from '../../assets/imgs/Neo.png';
 export const images = [
     {
         src: MainCesar,
