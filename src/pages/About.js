@@ -1,4 +1,5 @@
 import { images } from "../data/images/img";
+import LinkBox from "./components/atom/btnBox";
 
 const About = () => {
   const view = `
@@ -15,7 +16,7 @@ const About = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, <br/> officia  natus ipsum provident debitis porro accusantium praesentium <br/>expedita eligendi  nisi id iste. Sunt inventore cupiditate voluptates accusantium odit pariatur maxime!
                 </p>
 
-                <a href="#" class="btn-box">More About Me</a>
+                ${LinkBox(0)}
             </div>
         </div>
             

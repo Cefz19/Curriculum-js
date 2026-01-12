@@ -1,100 +1,95 @@
-@use '../animations/keyframe' as *;
+@use "../animations/keyframe" as *;
+@use "./about" as *;
 
 .services__main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem; // Asegura que no toque los bordes en móvil
+
+  .title {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    .sub-title {
+      // Tamaño fluido: pequeño en móvil, grande en desktop
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: 1.2;
+
+      span {
+        color: #0ef;
+      }
+    }
+  }
+
+  .card__list {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem; // Asegura que no toque los bordes en móvil
+    display: grid;
+    // Solución definitiva para desbordamiento en móviles (Uso de min())
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
 
-    .title {
-        text-align: center;
+    .card {
+      background-color: #030b1a; // Fondo sutil para destacar el contenido
+      padding: 2.5rem 1.8rem;
+      border-radius: 1.5rem;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 10px 30px rgba(34, 51, 66, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      i {
+        font-size: 3.5rem;
+        color: #0ef;
+        margin-bottom: 1rem;
+        // Efecto de brillo suave en el icono
+        text-shadow: 0 0 15px rgba(0, 238, 255, 0.4);
+      }
+
+      h2 {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #ccc;
         margin-bottom: 2rem;
+      }
 
-        .sub-title {
-            // Tamaño fluido: pequeño en móvil, grande en desktop
-            font-size: clamp(2.2rem, 5vw, 3.5rem); 
-            line-height: 1.2;
+      .btn-box {
+        display: inline-block;
+        padding: 0.8rem 2rem;
+        background: #0ef;
+        color: #081b29;
+        border-radius: 30px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
 
-            span {
-                color: #0ef;
-            }
+        &:hover {
+          background: #081b29;
+          color: #0ef;
+          box-shadow: 0 0 15px #0ef;
+          transform: translateY(-3px);
         }
-    }
+      }
 
-    .card__list {
-        width: 100%;
-        display: grid;
-        // Solución definitiva para desbordamiento en móviles (Uso de min())
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-        gap: 2rem;
-        padding: 2rem 0;
+      // Efecto Hover en la tarjeta
+      &:hover {
+        transform: translateY(-12px);
+        background: #1a1a1a;
+        box-shadow: 0 15px 40px rgba(0, 238, 255, 0.15);
 
-        .card {
-            background-color: #030b1a; // Fondo sutil para destacar el contenido
-            padding: 2.5rem 1.8rem;
-            border-radius: 1.5rem;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 10px 30px rgba(34, 51, 66, 0.2);
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-
-            i {
-                font-size: 3.5rem;
-                color: #0ef;
-                margin-bottom: 1rem;
-                // Efecto de brillo suave en el icono
-                text-shadow: 0 0 15px rgba(0, 238, 255, 0.4);
-            }
-
-            h2 {
-                font-size: 1.6rem;
-                font-weight: 600;
-                margin-bottom: 1rem;
-                color: #fff;
-            }
-
-            p {
-                font-size: 1rem;
-                line-height: 1.6;
-                color: #ccc;
-                margin-bottom: 2rem;
-            }
-
-            .read {
-                display: inline-block;
-                padding: 0.7rem 1.5rem;
-                background: #0ef;
-                border-radius: 0.8rem;
-                font-size: 0.95rem;
-                color: #081b29;
-                text-decoration: none;
-                font-weight: 700;
-                transition: all 0.3s ease;
-                box-shadow: 0 0 15px rgba(0, 238, 255, 0.3);
-
-                // Animación (opcional si ya la manejas por JS o al cargar)
-                opacity: 0;
-                animation: slideTop 0.8s ease forwards;
-                animation-delay: 0.3s;
-
-                &:hover {
-                    transform: scale(1.05);
-                    background: #fff;
-                    box-shadow: 0 0 25px #0ef;
-                }
-            }
-
-            // Efecto Hover en la tarjeta
-            &:hover {
-                transform: translateY(-12px);
-                background: #1a1a1a;
-                box-shadow: 0 15px 40px rgba(0, 238, 255, 0.15);
-                
-                i {
-                    transform: rotateY(10deg);
-                }
-            }
+        i {
+          transform: rotateY(10deg);
         }
+      }
     }
+  }
 }

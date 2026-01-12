@@ -1,3 +1,5 @@
+import LinkBox from "../atom/btnBox";
+
 const ServiceCard = (title, description, icon = "bx-code", color) => {
   return `
 
@@ -5,7 +7,7 @@ const ServiceCard = (title, description, icon = "bx-code", color) => {
             <i class='bx ${icon}' style='color:${color}'></i>
             <h2>${title}</h2>
             <p>${description}</p>
-            <a href="#" class="read">Learm More</a>
+            ${LinkBox(1)}
         </div>
     `;
 };
