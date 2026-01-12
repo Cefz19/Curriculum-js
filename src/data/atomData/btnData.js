@@ -4,7 +4,7 @@ export const LinkData = [
         title: 'More About Me',
     },
     {
-        link: '',
+        link: '#details',
         title: 'Learn More',
     },
     {

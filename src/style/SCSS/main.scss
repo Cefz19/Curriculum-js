@@ -5,6 +5,10 @@
 //layout
 @use './layout/layout-main.scss';
 
+// Teplate Spinning
+
+@use './compónents/template/spinningCard';
+
 //components
 @use './compónents/header';
 @use './compónents/home';

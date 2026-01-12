@@ -2,6 +2,8 @@ import Layout from "../pages/Layout";
 import initSectionAnimations from "../utils/sectionAnimations";
 import initializeTyped from "../pages/components/Typed";
 import PorfolioPDF from '../pages/docs/PorfolioPDF';
+import SpinningCards from '../pages/components/molecules/SpinningCards';
+import { SpinningData } from "../data/moleculesData/SpinningData";
 import { PorforDataPDF } from "../data/docsData/PorfolioData";
 
 const router = () => {
@@ -18,7 +20,18 @@ const router = () => {
       link.download = "SAT_Document.pdf";
       link.click();
     });
-  } else {
+  } else if(hash === '#details') {
+
+    const data = SpinningData[0];
+    content.innerHTML = `
+      <div class="details-screen">
+        ${SpinningCards(data.src, data.title, data.description, data.details)}
+        <a href="#home" class="back-link">Back to Home</a>
+      </div>
+    `;
+    window.scrollTo(0, 0);
+  }
+  else {
     content.innerHTML = Layout();
 
     requestAnimationFrame(() => {
@@ -34,7 +47,6 @@ const router = () => {
       }
     });
   };
-  // Renderizar header y layout completo
 };
 
 export default router;

@@ -1,0 +1,110 @@
+@use "../../base/variables";
+
+.details-screen {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+
+  back-link {
+    margin-top: 20px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    &:hover {
+      background: #fff;
+      color: #000;
+    }
+  }
+
+  .card {
+    position: relative;
+    width: variables.$card-width;
+    height: variables.$card-height;
+    margin: 20px;
+    cursor: pointer;
+    perspective: 1000px;
+
+    .face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .front {
+      transform: rotateY(0deg);
+      box-shadow: variables.$shadow;
+      z-index: 2;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      h3 {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.4);
+        text-align: center;
+      }
+    }
+
+    .back {
+      transform: rotateY(180deg);
+      background: rgb(3, 35, 54);
+      padding: 15px;
+      color: #f3f3f3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      box-shadow: variables.$shadow;
+
+      .link {
+        border-top: solid 1px #f3f3f3;
+        height: 50px;
+        line-height: 50px;
+
+        a {
+          color: #f3f3f3;
+          text-decoration: none;
+          font-weight: bold;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        h3 {
+          font-size: 30px;
+          margin-top: 20px;
+          letter-spacing: 2px;
+        }
+
+        p {
+          letter-spacing: 1px;
+        }
+      }
+    }
+    &:hover .front {
+      transform: rotateY(180deg);
+    }
+
+    &:hover .back {
+      transform: rotateY(0deg);
+    }
+  }
+}
