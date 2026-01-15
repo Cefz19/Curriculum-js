@@ -1,10 +1,14 @@
+@use 'sass:map';
+
 $global-width: 100%;
 $global-max-width: 1200px;
 
 $space-margin: 0 auto;
 
 //Colors
-
+$colors: (
+    primary: radial-gradient(circle, rgb(34, 11, 11) 0%, rgb(22, 9, 36) 50%, rgb(26, 0, 3) 100%),
+);
 
 
 //Spinning Card
@@ -12,3 +16,5 @@ $card-width: 300px;
 $card-height: 300px;
 $primary-color: rebeccapurple;
 $shadow: 0 5px 10px #000;
+
+@function color($name) { @return map.get($colors, $name); }

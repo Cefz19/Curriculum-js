@@ -1,6 +1,10 @@
 export const LinkData = [
     {
-        link: '',
+        link: '#about',
+        title: 'About Me',
+    },
+    {
+        link: '#pdf',
         title: 'More About Me',
     },
     {

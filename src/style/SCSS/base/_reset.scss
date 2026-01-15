@@ -1,5 +1,6 @@
 /* _reset.scss */
 /* Google Fonts */
+@use './variables';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* Elimina márgenes y paddings por defecto */
@@ -22,7 +23,7 @@ body {
   // Usar clamp para que la fuente no sea gigante en móviles
   font-size: clamp(1rem, 1.2vw, 1.2rem); 
   color: #ededed;
-  background-color: #0f010d;
+  background: variables.color(primary);
   line-height: 1.5;
   overflow-x: hidden; // Vital para evitar scroll horizontal por animaciones
 }

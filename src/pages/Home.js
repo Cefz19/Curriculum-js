@@ -1,5 +1,6 @@
 import { IconsData } from '../data/atomData/IconsData';
 import Icons from '../pages/components/atom/Icons';
+import LinkBox from './components/atom/btnBox';
 
 const Home = () => {
   const view = `
@@ -10,9 +11,12 @@ const Home = () => {
             <div class="content-text">
                 <h2>Hello, It´s Me</h2>
                 <h1>Cesar Zendejas Torres</h1>
-                <h3>And I´m a <span class="text"></span></h3>
-                <p>I´m a Computer Systems Engineer <br> with extensive experience for over 3 years
-                    <br>Expertise is to create and webiste desing
+                <h3>Desarrollador Jr. con experiencia <br>
+                <span class="text"></span>
+                </h3>
+                <p>I´m a Computer Systems Engineer 
+                  <br> with extensive experience for over 3 years
+                  <br>Expertise is to create and website desing
                 </p>
             </div>
 
@@ -25,7 +29,7 @@ const Home = () => {
             </div>
 
             <div>
-              <a href="#" class="btn-box">More About Me</a>
+              ${LinkBox(0)}
             </div>
         </div>
 

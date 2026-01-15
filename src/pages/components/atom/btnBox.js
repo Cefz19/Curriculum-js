@@ -1,4 +1,4 @@
-import { LinkData } from "../../../data/atomData/btnData";
+import { LinkData } from "../../../data/atomData/linkData";
 
 const LinkBox = (index) => {
   const item = LinkData[index];

@@ -1,20 +1,21 @@
 @use '../animations/keyframe';
+@use '../base/variables';
 
 .header__nav {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    
+
     // Mejoramos el ancho y fondo
     width: 100%;
     max-width: 1200px;
-    background: rgba(23, 3, 5, 0.9); // Añadimos transparencia para un look moderno
-    backdrop-filter: blur(10px);    // Efecto cristal (Glassmorphism)
-    
+    background: variables.color(primary); // Añadimos transparencia para un look moderno
+    backdrop-filter: blur(10px); // Efecto cristal (Glassmorphism)
+
     // Grid flexible para evitar roturas
     display: grid;
-    grid-template-columns: minmax(auto, 1fr) auto; 
+    grid-template-columns: minmax(auto, 1fr) auto;
     align-items: center;
     padding: 0.5rem 1.5rem;
     z-index: 1000;
@@ -26,7 +27,7 @@
         font-weight: 700;
         opacity: 0;
         animation: slideRight 1.3s ease forwards;
-        
+
         // Evitamos el padding excesivo que rompe el grid en móvil
         padding: 0.5rem 0;
     }
@@ -55,6 +56,7 @@
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
         justify-items: center;
+
         .navbar {
             display: none; // Aquí podrías implementar un menú hamburguesa
         }

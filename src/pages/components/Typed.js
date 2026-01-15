@@ -12,7 +12,7 @@ export default function initializeTyped() {
       typedInitialized = true;
 
       new Typed(".text", {
-        strings: ["Computer System Engineer^1000", "Web Developer^1000"],
+        strings: ['App Moviles', 'Sistemas POS', 'Gestion de Base de Datos', 'Diseño UX/UI'],
         typeSpeed: 110,
         backSpeed: 80,
         loop: true,

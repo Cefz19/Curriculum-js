@@ -13,10 +13,18 @@ const About = () => {
             <div class="wrapper__text">
                 <h2>About<span>Me</span></h2>
                 <h4>Full Stack Developer!</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, <br/> officia  natus ipsum provident debitis porro accusantium praesentium <br/>expedita eligendi  nisi id iste. Sunt inventore cupiditate voluptates accusantium odit pariatur maxime!
+                <p>
+                    Ingeniero en Sistemas Computacionales con experiencia combinada 
+                    <br/> en desarrollo de software, base de datos y metodologías agiles. 
+                    <br/> Enfocado en desarrollo móvil y web, además de integración de APIs 
+                    <br/> en la nube y gestión de datos. Integrado en desarrollo colaborativo  
+                    <br/> e implementado controles de versiones, aportando soluciones escalables . 
+                    <br/> y orientada a resultados Complementado con experiencia en procesos industriales 
+                    <br/> como técnico modelista certificado, lo que permite una visión  
+                    <br/> integral de innovación y mejora continua.
                 </p>
 
-                ${LinkBox(0)}
+                ${LinkBox(1)}
             </div>
         </div>
             

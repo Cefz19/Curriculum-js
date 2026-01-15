@@ -4,20 +4,20 @@ import initializeTyped from "../pages/components/Typed";
 import PorfolioPDF from '../pages/docs/PorfolioPDF';
 import SpinningCards from '../pages/components/molecules/SpinningCards';
 import { SpinningData } from "../data/moleculesData/SpinningData";
-import { PorforDataPDF } from "../data/docsData/PorfolioData";
+import { PorfolioDataPDF } from "../data/docsData/PorfolioData";
 
 const router = () => {
   const content = document.getElementById("content");
-  const hash = window.location.hash || "#home";
+  const hash = window.location.hash || "#home" || "";
 
-  if (hash === "#pdf") {
-    const { atitle, title, src } = PorforDataPDF[0]
+  if (hash === "#pdf" && hash) {
+    const { atitle, title, src } = PorfolioDataPDF[0]
     content.innerHTML = PorfolioPDF(atitle, title, src);
 
     document.getElementById("download")?.addEventListener("click", () => {
       const link = document.createElement("a");
       link.href = src;
-      link.download = "SAT_Document.pdf";
+      link.download = "CV Ing_Sist_Com.pdf";
       link.click();
     });
   } else if(hash === '#details') {
