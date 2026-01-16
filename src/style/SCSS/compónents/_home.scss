@@ -1,7 +1,7 @@
 @use '../animations/keyframe' as *;
 
 // Variables para facilitar cambios
-$cyan-primary: #0ef;
+$cyan-primary: #ad0641;
 $bg-dark: #081b29;
 
 .home__content {
@@ -58,7 +58,8 @@ $bg-dark: #081b29;
                 opacity: 0;
                 animation: slideBottom 1s ease forwards 1.5s;
                 
-                span { color: $cyan-primary; }
+                span { color: #0ef; }
+                
             }
 
             p {
@@ -93,7 +94,7 @@ $bg-dark: #081b29;
                 &:hover {
                     background: $cyan-primary;
                     color: $bg-dark;
-                    box-shadow: 0 0 15px $cyan-primary;
+                    box-shadow: 0 0 15px #0ef;
                     transform: translateY(-5px);
                 }
             }

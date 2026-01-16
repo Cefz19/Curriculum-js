@@ -11,7 +11,7 @@
     width: 100%;
     max-width: 1200px;
     background: variables.color(primary); // Añadimos transparencia para un look moderno
-    backdrop-filter: blur(10px); // Efecto cristal (Glassmorphism)
+    backdrop-filter: blur(30px); // Efecto cristal (Glassmorphism)
 
     // Grid flexible para evitar roturas
     display: grid;
@@ -41,7 +41,7 @@
             font-size: 0.95rem;
             color: #fff;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 400;
             transition: color 0.3s ease;
             opacity: 0;
             animation: slideTop 1.3s ease forwards;
@@ -58,7 +58,7 @@
         justify-items: center;
 
         .navbar {
-            display: none; // Aquí podrías implementar un menú hamburguesa
+            display: none; // Aquí para implementar un menú hamburguesa
         }
     }
 }

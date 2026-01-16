@@ -29,8 +29,7 @@
         aspect-ratio: 1 / 1;
         object-fit: cover;
         border-radius: 20px; // Un toque más moderno
-        border: 4px solid #0ef;
-        box-shadow: 0 0 20px rgba(0, 238, 255, 0.3);
+        border: 2px solid c;
       }
     }
 
@@ -48,7 +47,8 @@
         margin-bottom: 0.5rem;
 
         span {
-          color: #0ef;
+          padding: clamp(2rem, 5vw, 5rem) 1.5rem;
+          color:  #ad0641;
         }
       }
 
@@ -69,7 +69,7 @@
       .btn-box {
         display: inline-block;
         padding: 0.8rem 2rem;
-        background: #0ef;
+        background: #ad0641;
         color: #081b29;
         border-radius: 30px;
         font-weight: 600;

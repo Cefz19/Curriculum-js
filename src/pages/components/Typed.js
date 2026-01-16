@@ -13,8 +13,8 @@ export default function initializeTyped() {
 
       new Typed(".text", {
         strings: ['App Moviles', 'Sistemas POS', 'Gestion de Base de Datos', 'Diseño UX/UI'],
-        typeSpeed: 110,
-        backSpeed: 80,
+        typeSpeed: 95,
+        backSpeed: 70,
         loop: true,
         showCursor: true,
         cursorChar: ".",
