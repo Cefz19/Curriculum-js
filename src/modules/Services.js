@@ -1,4 +1,4 @@
-import ServiceCard from "./components/molecules/ServiceCard";
+import ServiceCard from "../pages/components/molecules/ServiceCard";
 import { ServiceData } from '../data/moleculesData/ServiceData';
 
 const Services = () => {

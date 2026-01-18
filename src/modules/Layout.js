@@ -1,5 +1,5 @@
 import Header from '../Template/Header';
-import Sections from './components/Sections';
+import Sections from '../pages/components/Sections';
 const Layout = () => {
   return `
         <header class="header__nav">${Header()}</header>

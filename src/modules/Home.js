@@ -1,6 +1,6 @@
 import { IconsData } from '../data/atomData/IconsData';
 import Icons from '../pages/components/atom/Icons';
-import LinkBox from './components/atom/btnBox';
+import LinkBox from '../pages/components/atom/btnBox';
 
 const Home = () => {
   const view = `

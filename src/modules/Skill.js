@@ -1,7 +1,7 @@
 import { SkillsData } from "../data/moleculesData/SkillsData";
 import { RadialData } from "../data/moleculesData/RadialData";
-import SkillCard from "./components/molecules/SkillCard";
-import RadialCard from "./components/molecules/RadialCard";
+import SkillCard from "../pages/components/molecules/SkillCard";
+import RadialCard from "../pages/components/molecules/RadialCard";
 
 const Skill = () => {
   const view = `

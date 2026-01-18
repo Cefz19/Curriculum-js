@@ -1,9 +1,9 @@
-import Layout from "../pages/Layout";
+import Layout from "../modules/Layout";
 import initSectionAnimations from "../utils/sectionAnimations";
 import initializeTyped from "../pages/components/Typed";
 import PorfolioPDF from '../pages/docs/PorfolioPDF';
 import SpinningCards from '../pages/components/molecules/SpinningCards';
-import { SpinningData } from "../data/moleculesData/SpinningData";
+import { ImgSpinningData } from "../data/moleculesData/SpinningData";
 import { PorfolioDataPDF } from "../data/docsData/PorfolioData";
 
 const router = () => {
@@ -20,9 +20,9 @@ const router = () => {
       link.download = "CV Ing_Sist_Com.pdf";
       link.click();
     });
-  } else if(hash === '#details') {
+  } else if(hash === '#details' && hash) {
 
-    const data = SpinningData[0];
+    const data = ImgSpinningData[0];
     content.innerHTML = `
       <div class="details-screen">
         ${SpinningCards(data.src, data.title, data.description, data.details)}

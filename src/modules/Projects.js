@@ -1,5 +1,5 @@
 import { ProjectsData } from "../data/moleculesData/ProjectData";
-import ProjectsCard from "./components/molecules/ProjectsCard";
+import ProjectsCard from "../pages/components/molecules/ProjectsCard";
 
 const Projects = () => {
   const view = `

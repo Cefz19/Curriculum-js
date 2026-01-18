@@ -9,15 +9,15 @@
   justify-content: center;
   padding: 50px 0;
 
-  back-link {
+  .back-link {
     margin-top: 20px;
     color: #fff;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 1px solid variables.$cyan-primary;
     padding: 10px 20px;
     border-radius: 5px;
     &:hover {
-      background: #fff;
+      background: variables.$cyan-primary;
       color: #000;
     }
   }

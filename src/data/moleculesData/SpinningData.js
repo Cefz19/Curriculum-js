@@ -1,6 +1,6 @@
 import NeoImg from '../../assets/imgs/Neo.png';
 
-export const  SpinningData = [
+export const  ImgSpinningData = [
     {
         src: NeoImg,
         title: 'UX/IX',

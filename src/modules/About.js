@@ -1,5 +1,5 @@
 import { images } from "../data/images/img";
-import LinkBox from "./components/atom/btnBox";
+import LinkBox from "../pages/components/atom/btnBox";
 
 const About = () => {
   const view = `

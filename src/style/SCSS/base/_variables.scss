@@ -5,6 +5,9 @@ $global-max-width: 1200px;
 
 $space-margin: 0 auto;
 
+$cyan-primary: #ad0641;
+
+
 //Colors
 $colors: (
     primary: radial-gradient(circle, rgb(34, 11, 11) 0%, rgb(22, 9, 36) 50%, rgb(26, 0, 3) 100%),
@@ -12,8 +15,9 @@ $colors: (
 
 
 //Spinning Card
-$card-width: 300px;
-$card-height: 300px;
+$card-width: 400px;
+$card-height: 500px;
+$cyan-primary: #ad0641;
 $primary-color: rebeccapurple;
 $shadow: 0 5px 10px #000;
 

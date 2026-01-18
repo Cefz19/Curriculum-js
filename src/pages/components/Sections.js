@@ -1,9 +1,9 @@
-import Home from "../Home";
-import About from "../About";
-import Services from "../Services";
-import Skill from "../Skill";
-import Projects from "../Projects";
-import Footer from "../Footer";
+import Home from "../../modules/Home";
+import About from "../../modules/About";
+import Services from "../../modules/Services";
+import Skill from "../../modules/Skill";
+import Projects from "../../modules/Projects";
+import Footer from "../../modules/Footer";
 
 const Sections = () => {
   const view = `

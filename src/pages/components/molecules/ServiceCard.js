@@ -7,7 +7,7 @@ const ServiceCard = (title, description, icon = "bx-code", color) => {
             <i class='bx ${icon}' style='color:${color}'></i>
             <h2>${title}</h2>
             <p>${description}</p>
-            ${LinkBox(1)}
+            ${LinkBox(2)}
         </div>
     `;
 };
