@@ -9,6 +9,7 @@ $border-radius: 8px;
   flex-direction: column;
   align-items: center;
   padding-top: clamp(20px, 5vh, 60px);
+  background-color: variables.$cyan-primary;
 }
 
 .btn-primary {
