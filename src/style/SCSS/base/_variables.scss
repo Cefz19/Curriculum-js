@@ -2,22 +2,40 @@
 
 $global-width: 100%;
 $global-max-width: 1200px;
-
 $space-margin: 0 auto;
 
-$cyan-primary: #ad0641;
 
 
 //Colors
 $colors: (
     primary: radial-gradient(circle, rgb(34, 11, 11) 0%, rgb(22, 9, 36) 50%, rgb(26, 0, 3) 100%),
+    secondary: #ad0641, 
+    accent: #4c418b, 
+    neutral: #ededed, 
+    // success: #28a745, 
+    // warning: #ffc107, 
+    // danger: #dc3545, 
+    // info: #17a2b8, 
+    // dark: #343a40, 
+    // light: #f8f9fa
 );
 
+$shadows: (
+    sm: 0 5px 10px #000,
+    // md: ,
+    // lg: ,
+    // xl: ,
+    button-sm: 1.5px solid rgba(231, 189, 149, 0.514),
+    box-sm: 0 4px 10px rgba(194, 197, 245, 0.644),
+    box-md: 0 4px 10px rgba(217, 198, 241, 0.658),
+);
 
+@function shadow($name) { @return map.get($shadows, $name); }
 //Spinning Card
 $card-width: 400px;
 $card-height: 500px;
-$cyan-primary: #ad0641;
+
+
 $primary-color: rebeccapurple;
 $shadow: 0 5px 10px #000;
 

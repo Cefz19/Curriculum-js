@@ -15,11 +15,11 @@ $border-radius: 8px;
   font-size: 1.1rem;
   padding: 12px;
   border-radius: $border-radius;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  box-shadow: 0 4px 10px rgba(238, 138, 146, 0.377);
-  color: #fff;
+  border: variables.shadow(button-sm);
+  box-shadow: variables.shadow(box-sm);
+  color: variables.color(neutral);
   font-weight: bold;
-  background-color: variables.$cyan-primary;
+  background-color: variables.color(secondary);
   margin-bottom: 1.5rem;
   cursor: pointer;
   transition: filter 0.3s;
@@ -60,7 +60,7 @@ iframe {
     background: #d8090952;
     padding: 20px;
     border-radius: $border-radius;
-    box-shadow: 0 4px 10px rgba(238, 138, 146, 0.377);
+    box-shadow: variables.shadow(box-sm);
 
   }
 
@@ -78,13 +78,13 @@ iframe {
   font-size: 1.1rem;
   padding: 12px;
   border-radius: $border-radius;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 10px rgba(238, 138, 146, 0.377);
-  color: #fff;
+  border: variables.shadow(button-sm);
+  box-shadow: variables.shadow(box-sm);
+  color: variables.color(neutral);
   margin-bottom: 1.5rem;
   text-decoration: none;
   text-align: center;
-  background: #4c418b;
+  background: variables.color(accent);
   font-weight: bold;
   transition: filter 0.3s;
 

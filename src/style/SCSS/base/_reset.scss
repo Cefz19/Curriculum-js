@@ -22,7 +22,7 @@ body {
   font-family: 'Poppins', sans-serif;
   // Usar clamp para que la fuente no sea gigante en móviles
   font-size: clamp(1rem, 1.2vw, 1.2rem); 
-  color: #ededed;
+  color: variables.color(neutral);
   background: variables.color(primary);
   line-height: 1.5;
   overflow-x: hidden; // Vital para evitar scroll horizontal por animaciones
