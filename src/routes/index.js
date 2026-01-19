@@ -10,9 +10,15 @@ const router = () => {
   const content = document.getElementById("content");
   const hash = window.location.hash || "#home" || "";
 
+
+
   if (hash === "#pdf" && hash) {
     const { atitle, title, src } = PorfolioDataPDF[0]
-    content.innerHTML = PorfolioPDF(atitle, title, src);
+    content.innerHTML = `
+    <main>
+      ${PorfolioPDF(atitle, title, src)}
+    </main>`;
+    
 
     document.getElementById("download")?.addEventListener("click", () => {
       const link = document.createElement("a");
@@ -20,7 +26,7 @@ const router = () => {
       link.download = "CV Ing_Sist_Com.pdf";
       link.click();
     });
-  } else if(hash === '#details' && hash) {
+  } else if(hash === '#details') {
 
     const data = ImgSpinningData[0];
     content.innerHTML = `
