@@ -1,4 +1,7 @@
 @use '../animations/keyframe' as *;
+@use '../base/variables';
+
+$bg-dark: #081b29;
 
 .footer__container {
     width: 100%;
@@ -6,7 +9,6 @@
     margin: 0 auto;
     padding: clamp(2rem, 5vw, 4rem) 1.5rem;
     display: grid;
-    // Mobile: 1 columna | Desktop: 2 columnas
     grid-template-columns: minmax(0, 1fr);
     gap: 3rem;
 
@@ -21,7 +23,7 @@
                 font-size: clamp(2.5rem, 5vw, 3.3rem);
                 text-align: left;
                 margin-bottom: 1.5rem;
-                span { color: #0ef; }
+                span { color: variables.color(light); }
             }
 
             h4 {
@@ -48,7 +50,7 @@
                 font-size: 1.1rem;
 
                 i {
-                    color: #0ef;
+                    color: variables.color(light);
                     font-size: 1.4rem;
                     transition: transform 0.3s ease;
                 }
@@ -59,29 +61,30 @@
             }
         }
 
-        .contact__icons {
+        .home__soc-icon {
             display: flex;
             gap: 1rem;
+            margin: 1.5rem 0;
 
-            a i {
+            a {
                 display: inline-flex;
                 justify-content: center;
                 align-items: center;
-                width: 3rem;
-                height: 3rem;
-                border: 2px solid #0ef;
+                width: 45px;
+                height: 45px;
+                border: 2px solid variables.color(secondary);
                 border-radius: 50%;
-                font-size: 1.3rem;
-                color: #0ef;
-                transition: all 0.4s ease;
+                font-size: 1.5rem;
+                color: variables.color(secondary);
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                 opacity: 0;
                 animation: slideLeft 1s ease forwards;
                 animation-delay: calc(0.1s * var(--i));
 
                 &:hover {
-                    background: #0ef;
-                    color: #081b29;
-                    box-shadow: 0 0 20px #0ef;
+                    background: variables.color(secondary);
+                    color: variables.color(dark);
+                    box-shadow: 0 0 15px variables.color(light);
                     transform: translateY(-5px);
                 }
             }
@@ -110,7 +113,7 @@
             &::placeholder { color: #666; }
 
             &:focus {
-                border-color: #0ef;
+                border-color: variables.color(light);
                 box-shadow: 0 0 10px rgba(0, 238, 255, 0.2);
             }
         }
@@ -124,7 +127,7 @@
             width: fit-content;
             min-width: 180px;
             padding: 1rem 2rem;
-            background: #0ef;
+            background: variables.color(light);
             color: #081b29;
             border: none;
             border-radius: 2rem;
@@ -137,7 +140,7 @@
 
             &:hover {
                 background: #fff;
-                box-shadow: 0 0 25px #0ef;
+                box-shadow: 0 0 25px variables.color(light);
                 transform: translateY(-3px);
             }
         }
@@ -169,7 +172,7 @@
             justify-content: center;
             width: 45px;
             height: 45px;
-            background: #0ef;
+            background: variables.color(light);
             color: #081b29;
             font-size: 1.5rem;
             border-radius: 50%;

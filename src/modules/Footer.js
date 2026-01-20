@@ -24,7 +24,7 @@ const Footer = () => {
                 <li><i class="bx ${IconD[1].icon}">1234556</i></li>
             </div>
 
-            <div class="contact__icons">
+            <div class="home__soc-icon">
                 ${IconsData.length > 0 
                     ? IconsData.map(service => Icons(
                     service.style,
