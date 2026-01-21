@@ -1,12 +1,15 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
+    publicPath: "./",
+    clean: true,
   },
   resolve: {
     extensions: [".js"],
@@ -21,6 +24,7 @@ module.exports = {
       {
         test: /\.(s[ac]ss|css)$/i,
         use: [
+          MiniCssExtractPlugin.loader,
           "style-loader", // Inyecta el CSS al DOM
           "css-loader", // Interpreta @import y url()
           "sass-loader", // Compila Sass a CSS
@@ -51,6 +55,17 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "css/main.css",
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "public"),
+          to: "",
+          globOptions: {
+            ignore: ["**/index.html"],
+          },
+        },
+      ],
     }),
   ],
 };
