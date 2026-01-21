@@ -59,7 +59,7 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, "public"),
-          to: "",
+          to: path.resolve(__dirname, "dist"),
           globOptions: {
             ignore: ["**/index.html"],
           },
