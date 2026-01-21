@@ -22,8 +22,8 @@ const router = () => {
 
     document.getElementById("download")?.addEventListener("click", () => {
       const link = document.createElement("a");
-      link.href = src;
-      link.download = "CV Ing_Sist_Com.pdf";
+      link.href = window.location.origin + '/Curriculum-js/cv-ing-sist-com.pdf';;
+      link.download = "cv-ing-sist-com.pdf";
       link.click();
     });
   } else if(hash === '#details') {
