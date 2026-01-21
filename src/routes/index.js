@@ -22,7 +22,7 @@ const router = () => {
 
     document.getElementById("download")?.addEventListener("click", () => {
       const link = document.createElement("a");
-      link.href = window.location.origin + '/Curriculum-js/cv-ing-sist-com.pdf';;
+      link.href = './cv-ing-sist-com.pdf';
       link.download = "cv-ing-sist-com.pdf";
       link.click();
     });
