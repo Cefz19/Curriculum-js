@@ -26,10 +26,9 @@ const Footer = () => {
 
             <div class="home__soc-icon">
                 ${IconsData.length > 0 
-                    ? IconsData.map(service => Icons(
-                    service.style,
-                    service.icon
-                )).join('') : '<p>No data loaded</p>'}
+                    ? IconsData.map(service => Icons(service)).join('') 
+                    : '<p>No data loaded</p>'
+                }
             </div>
         </section>
 
@@ -39,7 +38,7 @@ const Footer = () => {
                 <input type="text" placeholder="Enter Your Last Name" required>
                 <input type="" placeholder="Enter Your Email" required>
                 <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message"></textarea>
-                <input class="send" type="submit" value="submit" >
+                <input class="btn-box" type="submit" value="Submit" >
             </form>
         </section>
 

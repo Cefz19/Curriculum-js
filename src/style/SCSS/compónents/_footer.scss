@@ -1,5 +1,6 @@
 @use '../animations/keyframe' as *;
 @use '../base/variables';
+@use '../base/mixins' as *;
 
 $bg-dark: #081b29;
 
@@ -23,7 +24,10 @@ $bg-dark: #081b29;
                 font-size: clamp(2.5rem, 5vw, 3.3rem);
                 text-align: left;
                 margin-bottom: 1.5rem;
-                span { color: variables.color(light); }
+
+                span {
+                    color: variables.color(secondary);
+                }
             }
 
             h4 {
@@ -42,6 +46,7 @@ $bg-dark: #081b29;
 
         .contact__list {
             margin-bottom: 2rem;
+
             li {
                 display: flex;
                 align-items: center;
@@ -98,11 +103,14 @@ $bg-dark: #081b29;
         gap: 1rem;
         width: 100%;
 
-        input, textarea {
+
+        input,
+        textarea {
             width: 100%; // Crucial: se adapta al contenedor
-            padding: 1rem;
-            background: #1a1a1a;
-            border: 1px solid #333;
+            padding: .7rem;
+            margin-bottom: 10px;
+            background: variables.color(dark);
+            border: 1px solid variables.color(accent);
             outline: none;
             color: #fff;
             font-family: inherit;
@@ -110,7 +118,16 @@ $bg-dark: #081b29;
             border-radius: 0.8rem;
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
-            &::placeholder { color: #666; }
+            &::placeholder {
+                color: #666;
+            }
+
+            &:hover {
+                background: variables.color(dark);
+                color: variables.color(light);
+                box-shadow: variables.shadow(box-light);
+                transform: translateY(-3px);
+            }
 
             &:focus {
                 border-color: variables.color(light);
@@ -123,26 +140,9 @@ $bg-dark: #081b29;
             resize: vertical;
         }
 
-        .send {
-            width: fit-content;
-            min-width: 180px;
-            padding: 1rem 2rem;
-            background: variables.color(light);
-            color: #081b29;
-            border: none;
-            border-radius: 2rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            opacity: 0;
-            animation: slideTop 1s ease forwards 1s;
-
-            &:hover {
-                background: #fff;
-                box-shadow: 0 0 25px variables.color(light);
-                transform: translateY(-3px);
-            }
+        .btn-box {
+            width: 40%;
+            @include btn;
         }
     }
 }
@@ -150,7 +150,7 @@ $bg-dark: #081b29;
 // FOOTER & SCROLL TOP
 .last__text {
     margin-top: 4rem;
-    
+
     p {
         text-align: center;
         padding: 2rem;

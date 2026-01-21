@@ -22,10 +22,8 @@ const Home = () => {
 
             <div class="home__soc-icon">
                 ${IconsData.length > 0 
-                    ? IconsData.map(service => Icons(
-                    service.style,
-                    service.icon
-                )).join('') : '<p>No data loaded</p>'}
+                    ? IconsData.map(service => Icons(service)).join('')
+                    : '<p>No data loaded</p>'}
             </div>
 
             <div>

@@ -1,5 +1,7 @@
 @use "../animations/keyframe" as *;
 @use "./about" as *;
+@use '../base/mixins' as *;
+@use '../base/variables';
 
 .services__main {
   width: 100%;
@@ -17,7 +19,7 @@
       line-height: 1.2;
 
       span {
-        color: #0ef;
+        color: variables.color(secondary);
       }
     }
   }
@@ -25,7 +27,6 @@
   .card__list {
     width: 100%;
     display: grid;
-    // Solución definitiva para desbordamiento en móviles (Uso de min())
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 2rem;
     padding: 2rem 0;
@@ -63,21 +64,7 @@
       }
 
       .btn-box {
-        display: inline-block;
-        padding: 0.8rem 2rem;
-        background: #0ef;
-        color: #081b29;
-        border-radius: 30px;
-        font-weight: 600;
-        text-decoration: none;
-        transition: all 0.3s ease;
-
-        &:hover {
-          background: #081b29;
-          color: #0ef;
-          box-shadow: 0 0 15px #0ef;
-          transform: translateY(-3px);
-        }
+        @include btn;
       }
 
       // Efecto Hover en la tarjeta

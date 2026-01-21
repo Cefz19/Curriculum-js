@@ -11,10 +11,7 @@ const Projects = () => {
         </div>
         
         <div class="portfolio__content">
-
-            
-                ${
-                  ProjectsData.length > 0
+                  ${ProjectsData.length > 0
                     ? ProjectsData.map((service) =>
                         ProjectsCard(
                           service.src,

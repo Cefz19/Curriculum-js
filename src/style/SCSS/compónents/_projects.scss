@@ -1,3 +1,5 @@
+@use '../base/variables';
+
 .content__text {
     width: 100%;
     max-width: 1200px;
@@ -11,7 +13,7 @@
             text-align: center;
 
             span {
-                color: #0ef;
+                color: variables.color(secondary);
             }
         }
     }
@@ -28,7 +30,7 @@
             border-radius: 20px;
             overflow: hidden;
             aspect-ratio: 4 / 3; // Mantiene todas las tarjetas del mismo tamaño
-            background: #1a1a1a; // Fondo mientras carga la imagen
+            background: variables.color(dark); // Fondo mientras carga la imagen
 
             img {
                 width: 100%;
@@ -41,7 +43,7 @@
             .layer {
                 position: absolute;
                 inset: 0; // Atajo moderno para top, left, right, bottom: 0
-                background: linear-gradient(rgba(0, 0, 0, 0.2), #0ef);
+                background: linear-gradient(rgba(0, 0, 0, 0.2), variables.color(light));
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -62,7 +64,7 @@
                 }
 
                 p {
-                    color: #081b29; // Mejor contraste sobre fondo cian
+                    color: variables.color(dark); // Mejor contraste sobre fondo cian
                     font-size: 0.95rem;
                     line-height: 1.4;
                     margin-bottom: 1rem;
@@ -70,8 +72,8 @@
 
                 i {
                     font-size: 1.5rem;
-                    background: #fff;
-                    color: #081b29;
+                    background: variables.color(secondary);
+                    color: variables.color(dark)9;
                     width: 45px;
                     height: 45px;
                     display: flex;
@@ -82,8 +84,8 @@
 
                     &:hover {
                         transform: scale(1.1);
-                        background: #081b29;
-                        color: #0ef;
+                        background: variables.color(dark);
+                        color: variables.color(light);
                     }
                 }
             }

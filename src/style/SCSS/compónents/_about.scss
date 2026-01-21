@@ -1,3 +1,5 @@
+@use '../base/mixins' as *;
+
 .about__container {
   width: 100%;
   display: flex;
@@ -67,21 +69,7 @@
       }
 
       .btn-box {
-        display: inline-block;
-        padding: 0.8rem 2rem;
-        background: #ad0641;
-        color: #081b29;
-        border-radius: 30px;
-        font-weight: 600;
-        text-decoration: none;
-        transition: all 0.3s ease;
-
-        &:hover {
-          background: #081b29;
-          color: #0ef;
-          box-shadow: 0 0 15px #0ef;
-          transform: translateY(-3px);
-        }
+        @include btn;
       }
     }
   }

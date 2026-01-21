@@ -1,0 +1,19 @@
+@use '../base/variables';
+
+@mixin btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: variables.color(secondary);
+    color: variables.color(dark);
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: variables.color(dark);
+        color: variables.color(light);
+        box-shadow: variables.shadow(box-light);
+        transform: translateY(-3px);
+    }
+}

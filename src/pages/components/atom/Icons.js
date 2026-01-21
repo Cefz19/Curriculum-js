@@ -1,6 +1,8 @@
-const Icons = (style, icon) => {
+const Icons = ({ link, style, icon }) => {
     return `
-        <a href="#" style="${style}"><i class='bx ${icon}'></i></a>
+        <a href="${link}" style="${style}" target="_blank" rel="noopener noreferrer">
+            <i class='bx ${icon}'></i>
+        </a>
     `;
 }
 

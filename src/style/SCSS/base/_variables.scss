@@ -32,9 +32,12 @@ $shadows: (
     button-sm: 1.5px solid rgba(231, 189, 149, 0.514),
     box-sm: 0 4px 10px rgba(194, 197, 245, 0.644),
     box-md: 0 4px 10px rgba(217, 198, 241, 0.658),
+    box-light: 0 0 15px #0ef,
 );
 
 @function shadow($name) { @return map.get($shadows, $name); }
+
+
 //Spinning Card
 $card-width: 400px;
 $card-height: 500px;
