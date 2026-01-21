@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
-    publicPath: "./",
+    publicPath: '',
     clean: true,
   },
   resolve: {
@@ -24,7 +24,6 @@ module.exports = {
       {
         test: /\.(s[ac]ss|css)$/i,
         use: [
-          MiniCssExtractPlugin.loader,
           "style-loader", // Inyecta el CSS al DOM
           "css-loader", // Interpreta @import y url()
           "sass-loader", // Compila Sass a CSS
@@ -51,7 +50,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: true,
       template: "./public/index.html",
-      filename: "./index.html",
+      filename: "index.html",
     }),
     new MiniCssExtractPlugin({
       filename: "css/main.css",
