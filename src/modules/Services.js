@@ -12,10 +12,7 @@ const Services = () => {
             <div class="card__list">
                 ${ServiceData.length > 0 
                     ? ServiceData.map(service => ServiceCard(
-                    service.title,
-                    service.description,
-                    service.icon,
-                    service.color
+                    service
                 )).join('') : '<p>No data loaded</p>'}
             </div>
 
