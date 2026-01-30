@@ -16,14 +16,7 @@ const Skill = () => {
                     <div class="technical-bars">
                         ${
                           SkillsData.length > 0
-                            ? SkillsData.map((skill) =>
-                                SkillCard(
-                                  skill.name,
-                                  skill.icon,
-                                  skill.color,
-                                  skill.classes
-                                )
-                              ).join("")
+                            ? SkillsData.map((skill) => SkillCard(skill)).join('')
                             : "<p>No data loaded</p>"
                         }
                         
@@ -50,8 +43,8 @@ const Skill = () => {
                                   radial.r,
                                   radial.path,
                                   radial.percetage,
-                                  radial.text
-                                )
+                                  radial.text,
+                                ),
                               ).join("")
                             : "<p>No data loaded</p>"
                         }

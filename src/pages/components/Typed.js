@@ -12,7 +12,7 @@ export default function initializeTyped() {
       typedInitialized = true;
 
       new Typed(".text", {
-        strings: ['App Moviles', 'Sistemas POS', 'Gestion de Base de Datos', 'Diseño UX/UI'],
+        strings: ['Modelista de Calzado', 'App Moviles', 'Sistemas POS', 'Gestion de Base de Datos'],
         typeSpeed: 95,
         backSpeed: 70,
         loop: true,
@@ -38,28 +38,3 @@ export default function initializeTyped() {
     }
   }, 100);
 }
-
-
-
-
-// export default function initializeTyped() {
-//   const target = document.querySelector(".text");
-
-//   if (!target) return;
-
-//   if (window.Typed) {
-//     new Typed(".text", {
-//       strings: ["Computer System Engineer", "Web Developer"],
-//       typeSpeed: 100,
-//       backSpeed: 60,
-//       loop: true,
-//     });
-//   } else {
-//     const checkTyped = setInterval(() => {
-//       if (window.Typed) {
-//         clearInterval(checkTyped);
-//         this.initializeTyped();
-//       }
-//     }, 100);
-//   }
-// }
