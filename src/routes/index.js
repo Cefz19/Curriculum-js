@@ -28,10 +28,10 @@ const router = () => {
     });
   } else if(hash === '#details') {
 
-    const data = ImgSpinningData[0];
+    const cardsHTML = ImgSpinningData.map(data => SpinningCards(data.src, data.title, data.description, data.details)).join('');
     content.innerHTML = `
       <div class="details-screen">
-        ${SpinningCards(data.src, data.title, data.description, data.details)}
+        ${cardsHTML}
         <a href="#home" class="back-link">Back to Home</a>
       </div>
     `;

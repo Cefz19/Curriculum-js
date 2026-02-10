@@ -8,7 +8,7 @@ export const RadialData = [
         r: '80',
         path: 'path-1',
         percetage: '90%',
-        text: 'Creativity',
+        text: 'Creatividad',
     },
     {
         x: '0px',
@@ -18,8 +18,8 @@ export const RadialData = [
         cy: '100',
         r: '80',
         path: 'path-2',
-        percetage: '65%',
-        text: 'Creativity',
+        percetage: '85%',
+        text: 'Proactividad',
     },
     {
         x: '0px',
@@ -30,7 +30,7 @@ export const RadialData = [
         r: '80',
         path: 'path-3',
         percetage: '75%',
-        text: 'Creativity',
+        text: 'Disponibilidad',
     },
     {
         x: '0px',
@@ -40,7 +40,7 @@ export const RadialData = [
         cy: '100',
         r: '80',
         path: 'path-4',
-        percetage: '85%',
+        percetage: '80%',
         text: 'Teamwork',
     },
 ]

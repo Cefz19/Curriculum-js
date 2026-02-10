@@ -9,6 +9,7 @@ const ServiceCard = ({ title, description, preicon,  icon, color }) => {
             <p>${description}</p>
             ${LinkBox(2)}
         </div>
+        
     `;
 };
 
