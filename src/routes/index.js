@@ -31,7 +31,9 @@ const router = () => {
     const cardsHTML = ImgSpinningData.map(data => SpinningCards(data.src, data.title, data.description, data.details)).join('');
     content.innerHTML = `
       <div class="details-screen">
-        ${cardsHTML}
+        <div class="cards-grid">
+          ${cardsHTML}
+        </div>
         <a href="#home" class="back-link">Back to Home</a>
       </div>
     `;
