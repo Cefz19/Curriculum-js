@@ -8,9 +8,9 @@ import { PorfolioDataPDF } from "../data/docsData/PorfolioData";
 
 const router = () => {
   const content = document.getElementById("content");
-  const hash = window.location.hash || "#home" || "";
+  const fullHash = window.location.hash || "#home" || "";
 
-
+  const [hash, category] = fullHash.split('/');
 
   if (hash === "#pdf" && hash) {
     const { atitle, title, src } = PorfolioDataPDF[0]
@@ -28,7 +28,9 @@ const router = () => {
     });
   } else if(hash === '#details') {
 
-    const cardsHTML = ImgSpinningData.map(data => SpinningCards(data.src, data.title, data.description, data.details)).join('');
+    const selectedData = ImgSpinningData[category] || ImgSpinningData['calzado'];
+
+    const cardsHTML = selectedData.map(data => SpinningCards(data.src, data.title, data.description, data.details)).join('');
     content.innerHTML = `
       <div class="details-screen">
         <div class="cards-grid">

@@ -43,7 +43,7 @@ const Footer = () => {
         </section>
 
         <section class="last__text">
-            <p>Developer with love by Cesar Zendejas @2024</p>
+            <p>Developer with love by Cesar Zendejas @2026</p>
             <a href="#" class="top"><i class='bx ${IconD[2].icon}'></i></a>
         </section>
 

@@ -8,7 +8,15 @@ export const LinkData = [
         title: 'More About Me',
     },
     {
-        link: '#details',
+        link: '#details/calzado',
+        title: 'Learn More',
+    },
+    {
+        link: '#details/angular',
+        title: 'Learn More',
+    },
+    {
+        link: '#details/flutter',
         title: 'Learn More',
     },
     {
