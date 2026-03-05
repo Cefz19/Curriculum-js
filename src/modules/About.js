@@ -1,13 +1,15 @@
-import { images } from "../data/images/img";
+import { createPhoto } from "../presentation/entities/Photo";
 import LinkBox from "../pages/components/atom/btnBox";
 
 const About = () => {
+    const {cesar} = createPhoto();
+
   const view = `
     <section class="about__container">
 
         <div class="content">
             <div class="wrapper__img">
-                <img src="${images[0].src}" alt="${images[0].alt}">
+                <img src="${cesar.src}" alt="${cesar.alt}">
             </div>
 
             <div class="wrapper__text">
