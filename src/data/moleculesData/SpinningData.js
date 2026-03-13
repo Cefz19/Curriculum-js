@@ -5,6 +5,8 @@ const {
   cesar,
   patron,
 
+  hHome,
+
   fProject,
   fCronograma,
   fDesarrollo,
@@ -19,6 +21,11 @@ const {
 
 
 export const ImgSpinningData = {
+  html_css_js: [
+    {
+      src: hHome.src,
+    }
+  ],
   calzado: [
     {
       src: cesar.src,

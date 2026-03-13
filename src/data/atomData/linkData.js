@@ -8,6 +8,10 @@ export const LinkData = [
         title: 'More About Me',
     },
     {
+        link: '#details/html_css_js',
+        title: 'Learn More',
+    },
+    {
         link: '#details/calzado',
         title: 'Learn More',
     },
