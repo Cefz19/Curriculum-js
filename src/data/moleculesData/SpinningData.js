@@ -6,6 +6,9 @@ const {
   patron,
 
   hHome,
+  hService,
+  hSkills,
+  hContact,
 
   fProject,
   fCronograma,
@@ -24,6 +27,31 @@ export const ImgSpinningData = {
   html_css_js: [
     {
       src: hHome.src,
+      title: "Portfolio",
+      description:
+        "Desarrollo de interfaces de alto rendimiento utilizando JavaScript Vanilla y arquitectura modular. Implemento flujos de trabajo modernos con Webpack y SCSS para optimizar el empaquetado de recursos, garantizando aplicaciones web ligeras, escalables y con un control total sobre el DOM y el rendimiento del navegador",
+      details: "Detalles",
+    },
+    {
+      src: hService.src,
+      title: "Portfolio",
+      description:
+        "Desarrollo de interfaces de alto rendimiento utilizando JavaScript Vanilla y arquitectura modular. Implemento flujos de trabajo modernos con Webpack y SCSS para optimizar el empaquetado de recursos, garantizando aplicaciones web ligeras, escalables y con un control total sobre el DOM y el rendimiento del navegador",
+      details: "Detalles",
+    },
+    {
+      src: hSkills.src,
+      title: "Portfolio",
+      description:
+        "Desarrollo de interfaces de alto rendimiento utilizando JavaScript Vanilla y arquitectura modular. Implemento flujos de trabajo modernos con Webpack y SCSS para optimizar el empaquetado de recursos, garantizando aplicaciones web ligeras, escalables y con un control total sobre el DOM y el rendimiento del navegador",
+      details: "Detalles",
+    },
+     {
+      src: hContact.src,
+      title: "Portfolio",
+      description:
+        "Desarrollo de interfaces de alto rendimiento utilizando JavaScript Vanilla y arquitectura modular. Implemento flujos de trabajo modernos con Webpack y SCSS para optimizar el empaquetado de recursos, garantizando aplicaciones web ligeras, escalables y con un control total sobre el DOM y el rendimiento del navegador",
+      details: "Detalles",
     }
   ],
   calzado: [

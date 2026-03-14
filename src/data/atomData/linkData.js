@@ -12,15 +12,19 @@ export const LinkData = [
         title: 'Learn More',
     },
     {
-        link: '#details/calzado',
-        title: 'Learn More',
-    },
-    {
         link: '#details/angular',
         title: 'Learn More',
     },
     {
         link: '#details/flutter',
+        title: 'Learn More',
+    },
+    {
+        link: '#details/net',
+        title: 'Learn More',
+    },
+    {
+        link: '#details/calzado',
         title: 'Learn More',
     },
     {
