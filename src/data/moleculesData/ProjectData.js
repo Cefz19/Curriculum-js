@@ -2,11 +2,10 @@ import { images } from "../images/img";
 
 export const ProjectsData = [
   {
+    title: 'HTML | CSS | JS',
     src: images[1].src,
     alt: images[1].src,
-    title: "Diseño | Modelado de Calzado",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. ",
+    description: 'Desarrollo de interfaces de alto rendimiento utilizando JavaScript Vanilla y arquitectura modular. Implemento flujos de trabajo modernos con Webpack y SCSS para optimizar el empaquetado de recursos, garantizando aplicaciones web ligeras, escalables y con un control total sobre el DOM y el rendimiento del navegador.',
     icon: "bx-link-external",
   },
   {
