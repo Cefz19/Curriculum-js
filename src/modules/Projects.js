@@ -11,18 +11,13 @@ const Projects = () => {
         </div>
         
         <div class="portfolio__content">
-                  ${ProjectsData.length > 0
-                    ? ProjectsData.map((service) =>
-                        ProjectsCard(
-                          service.src,
-                          service.atl,
-                          service.title,
-                          service.description,
-                          service.icon
-                        )
-                      ).join("")
-                    : "<p>No data loaded</p>"
-                }
+                  ${
+                    ProjectsData.length > 0
+                      ? ProjectsData.map((service) =>
+                          ProjectsCard(service),
+                        ).join("")
+                      : "<p>No data loaded</p>"
+                  }
 
         </div>
     </div>

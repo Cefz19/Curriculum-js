@@ -1,4 +1,3 @@
-import Patronaje from "../../assets/imgs/Patron.webp";
 import { createPhoto } from "../../presentation/entities/Photo";
 
 const {
@@ -59,13 +58,6 @@ export const ImgSpinningData = {
       src: fProject.src,
       title: "Tienda online",
       description: "Mostrar Productos para hacer compras online de con entregas",
-      details: "Detalles",
-    },
-    {
-      src: Patronaje,
-      title: "Patronaje",
-      description:
-        "Especialista en Modelaje y Desar digitalizacion de procesos para garantiza productos copetitivos y listos para el mercado",
       details: "Detalles",
     },
   ],
