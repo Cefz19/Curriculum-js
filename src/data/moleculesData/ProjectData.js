@@ -19,8 +19,8 @@ export const ProjectsData = [
     link: 'https://cefz19.github.io/Curriculum-js/'
   },
   {
-    src: cesar.src,
-    alt: cesar.alt,
+    src: fProject.src,
+    alt: fProject.alt,
     title: "Angular",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque unde excepturi autem, eius ratione est a tempore ullam ab iusto vitae ipsam, libero deserunt non fuga ex recusandae hic commodi?",
