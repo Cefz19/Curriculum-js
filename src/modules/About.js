@@ -13,7 +13,7 @@ const About = () => {
             </div>
 
             <div class="wrapper__text">
-                <h2>About<span>Me</span></h2>
+                <h2>Acerca de<span>Mi</span></h2>
                 <h4>Full Stack Developer!</h4>
                 <p>
                     Ingeniero en Sistemas Computacionales con experiencia combinada 

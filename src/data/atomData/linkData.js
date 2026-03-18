@@ -1,19 +1,19 @@
 export const LinkData = [
     {
         link: '#about',
-        title: 'About Me',
+        title: 'Acerca de mi',
     },
     {
         link: '#pdf',
-        title: 'More About Me',
+        title: 'Mas sobre mi',
     },
     {
         link: '#details/html_css_js',
-        title: 'Learn More',
+        title: 'Repositorio',
     },
     {
         link: '#details/angular',
-        title: 'Learn More',
+        title: 'Repositorio',
     },
     {
         link: '#details/flutter',
