@@ -96,7 +96,6 @@ $bg-dark: #081b29;
         }
     }
 
-    // FORMULARIO REFACTORIZADO
     .contact__form {
         display: flex;
         flex-direction: column;
@@ -106,7 +105,7 @@ $bg-dark: #081b29;
 
         input,
         textarea {
-            width: 100%; // Crucial: se adapta al contenedor
+            width: 100%; 
             padding: .7rem;
             margin-bottom: 10px;
             background: variables.color(dark);
@@ -144,6 +143,7 @@ $bg-dark: #081b29;
             width: 40%;
             @include btn;
         }
+        .error-msg { color: red; font-size: 12px; }
     }
 }
 

@@ -20,7 +20,7 @@ const Footer = () => {
             </div>     
 
             <div class="contact__list">
-                <li><i class="bx ${IconD[0].icon}">contact@gmail.com</i></li>
+                <li><i class="bx ${IconD[0].icon}">molanddise@gmail.com</i></li>
                 <li><i class="bx ${IconD[1].icon}">1234556</i></li>
             </div>
 
@@ -33,12 +33,16 @@ const Footer = () => {
         </section>
 
         <section class="contact__form">
-            <form class="form__container">
+            <form class="form__container" id="contact-form">
                 <input type="text" placeholder="Enter Your Name" required>
+                <span id="error-firstName" class="error-msg"></span>
                 <input type="text" placeholder="Enter Your Last Name" required>
-                <input type="" placeholder="Enter Your Email" required>
+                <span id="error-firstName" class="error-msg"></span>
+                <input type="email" placeholder="Enter Your Email" required>
+                <span id="error-firstName" class="error-msg"></span>
                 <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message"></textarea>
                 <input class="btn-box" type="submit" value="Submit" >
+                <span id="form-status"></span>
             </form>
         </section>
 
