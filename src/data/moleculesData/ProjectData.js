@@ -16,7 +16,7 @@ export const ProjectsData = [
     alt: hHome.alt,
     description: 'Desarrollo de interfaces de alto rendimiento utilizando JavaScript Vanilla y arquitectura modular. Implemento flujos de trabajo modernos con Webpack y SCSS para optimizar el empaquetado de recursos, garantizando aplicaciones web ligeras, escalables y con un control total sobre el DOM y el rendimiento del navegador.',
     icon: iconExternal,
-    link: 'https://cefz19.github.io/Curriculum-js/'
+    link: 'https://github.com/Cefz19/Curriculum-js'
   },
   {
     src: fProject.src,

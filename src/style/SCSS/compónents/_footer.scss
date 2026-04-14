@@ -103,36 +103,6 @@ $bg-dark: #081b29;
     width: 100%;
 
     // --- Estructura de Grupos ---
-    .formulario__grupo {
-      // 1. Estado INCORRECTO (JS añade esta clase al grupo)
-      &-incorrecto {
-        .formulario__label {
-          color: #bb2929;
-        }
-        .formulario__input {
-          border: 3px solid #bb2929 !important;
-        }
-        .formulario__validacion-estado {
-          opacity: 1;
-          color: #bb2929;
-        }
-        .formulario__input-error {
-          display: block;
-        }
-      }
-
-      // 2. Estado CORRECTO (JS añade esta clase al grupo)
-      &-correcto {
-        .formulario__validacion-estado {
-          opacity: 1;
-          color: #1ed12d;
-        }
-        .formulario__input {
-          border-color: #1ed12d;
-        }
-      }
-    }
-
     .formulario__grupo-input {
       position: relative;
       margin-top: 25px;
@@ -148,8 +118,8 @@ $bg-dark: #081b29;
         transition: all 0.3s ease;
 
         // Label Flotante
-        &:focus + .formulario__label,
-        &:not(:placeholder-shown) + .formulario__label {
+        &:focus+.formulario__label,
+        &:not(:placeholder-shown)+.formulario__label {
           top: -12px;
           left: 10px;
           font-size: 0.8rem;
@@ -186,6 +156,46 @@ $bg-dark: #081b29;
       }
     }
 
+    .formulario__grupo {
+
+      // 1. Estado INCORRECTO (JS añade esta clase al grupo)
+      &-incorrecto {
+
+        .formulario__input {
+          border: 3px solid #bb2929 !important;
+        }
+
+        .formulario__validacion-estado {
+          opacity: 1;
+          color: #bb2929;
+        }
+
+        .formulario__input-error {
+          display: block;
+        }
+
+        .formulario__label {
+          color: #bb2929;
+        }
+      }
+
+      // 2. Estado CORRECTO (JS añade esta clase al grupo)
+      &-correcto {
+        .formulario__input {
+          border-color: #1ed12d;
+        }
+
+        .formulario__validacion-estado {
+          opacity: 1;
+          color: #1ed12d;
+        }
+
+
+      }
+    }
+
+
+
     // --- Mensajes y Errores ---
     .formulario__input-error {
       font-size: 12px;
@@ -198,7 +208,7 @@ $bg-dark: #081b29;
     .formulario__mensaje {
       display: none;
       align-items: center;
-      background: #fee2e2; // Podrías usar variables.color(danger-light) si existiera
+      background: #fee2e2;
       color: #991b1b;
       padding: 10px 15px;
       border-radius: 6px;
@@ -207,10 +217,12 @@ $bg-dark: #081b29;
       &-activo {
         display: flex;
       }
+
       i {
         font-size: 22px;
         margin-right: 10px;
       }
+
       p {
         margin: 0;
         font-size: 14px;
@@ -249,6 +261,7 @@ $bg-dark: #081b29;
       display: none;
       color: variables.color(light);
       text-align: center;
+
       &-activo {
         display: block;
         animation: fadeIn 0.5s forwards;
@@ -261,6 +274,7 @@ $bg-dark: #081b29;
       opacity: 0;
       transform: translateY(5px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);

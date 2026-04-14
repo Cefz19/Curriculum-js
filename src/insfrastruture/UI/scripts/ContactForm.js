@@ -5,12 +5,15 @@ export const initContactForm = () => {
   const formulario = document.getElementById("formulario");
   const inputs = document.querySelectorAll("#formulario .formulario__input");
 
-  if(!formulario)retrun;
-  
+  if (!formulario) return;
+
   const validarFormulario = (e) => {
     switch (e.target.name) {
       case "nombre":
         validarCampo(expresiones.nombre, e.target, "nombre");
+        break;
+      case "apellido":
+        validarCampo(expresiones.apellido, e.target, "apellido");
         break;
       case "email":
         // Importante: El tercer parámetro debe ser "email" para que coincida con grupo__email
