@@ -9,12 +9,13 @@ const Footer = () => {
         <section class="contact__text">
             <div class="text__me">
                 <h2>Contact <span>Me</span></h2>
-                <h4>Les´t work Together</h4>
+                <h4>Les´t Build Something Great</h4>
                 <p>
-                Lorem ipsum dolor sit amet 
-                consectetur adipisicing elit. 
-                Optio, dolor vero delectus 
-                esse dolorum sit, cupiditate nihi
+                "Como Ingeniero en Sistemas, mi enfoque va más allá de escribir código: <br/> 
+                diseño soluciones escalables integrando desarrollo móvil, web y servicios en la nube.<br/> 
+                Mi experiencia previa como Técnico Modelista me ha dado una disciplina <br/> única para la precisión y la optimización de procesos, <br/> permitiéndome ver cada proyecto desde una perspectiva técnica y estratégica. 
+                <br/> Si buscas un desarrollador con visión integral, capacidad técnica en APIs y bases de datos, y un fuerte enfoque en resultados...
+                <br/> <strong>¡Hablemos! Estoy listo para integrarme a tu equipo o proyecto."</strong>
                 </p>
             </div>     
 
@@ -40,7 +41,7 @@ const Footer = () => {
 
                  <div class="formulario__grupo-input"> 
                     <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="">
-                    <label for="nombre" class="formulario__label">Name</label>
+                    <label for="nombre" class="formulario__label">Name or Names</label>
                     <i class="formulario__validacion-estado bx bx-x-circle"></i>
                  </div>
                  <span class="formulario__input-error">El nombre tienen que ser de 4 a 16 digitos y solo permite letras</span>
@@ -51,7 +52,7 @@ const Footer = () => {
 
                  <div class="formulario__grupo-input"> 
                     <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="">
-                    <label for="nombre" class="formulario__label">Enter Your Last Name</label>
+                    <label for="nombre" class="formulario__label">Last Name</label>
                     <i class="formulario__validacion-estado bx bx-x-circle"></i>
                  </div>
                  <span class="formulario__input-error">El nombre tienen que ser de 4 a 16 digitos y solo permite letras</span>
