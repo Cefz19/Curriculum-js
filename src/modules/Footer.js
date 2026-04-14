@@ -35,70 +35,56 @@ const Footer = () => {
 
         <section class="contact__form">
 
-            <form class="formulario" id="formulario">
-
-            <div class="formulario__grupo" id="grupo__nombre">
-
-                 <div class="formulario__grupo-input"> 
-                    <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="">
-                    <label for="nombre" class="formulario__label">Name or Names</label>
-                    <i class="formulario__validacion-estado bx bx-x-circle"></i>
-                 </div>
-                 <span class="formulario__input-error">El nombre tienen que ser de 4 a 16 digitos y solo permite letras</span>
-
-            </div>
-
-             <div class="formulario__grupo" id="grupo__nombre">
-
-                 <div class="formulario__grupo-input"> 
-                    <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="">
-                    <label for="nombre" class="formulario__label">Last Name</label>
-                    <i class="formulario__validacion-estado bx bx-x-circle"></i>
-                 </div>
-                 <span class="formulario__input-error">El nombre tienen que ser de 4 a 16 digitos y solo permite letras</span>
-
-            </div>
-
-            <div class="formulario__grupo" id="grupo__nombre">
-
-                 <div class="formulario__grupo-input"> 
-                    <input type="email" class="formulario__input" name="email" id="mail" placeholder="">
-                    <label for="email" class="formulario__label">Enter Your Email</label>
-                    <i class="formulario__validacion-estado bx bx-x-circle"></i>
-                 </div>
-                 <span class="formulario__input-error">El correo solo debe de contener letras, numeros, puntos, guiones y guion bajo</span>
-
-            </div>
-
-            <div class="formulario__grupo" id="grupo__mensaje">
-                <div class="formulario__grupo-input">
-                    <textarea 
-                    cols="40" 
-                    rows="10"
-                    name="mensaje" 
-                    id="mensaje" 
-                    class="formulario__input" 
-                    placeholder=" "
-                    ></textarea>
-                    <label for="mensaje" class="formulario__label">Enter Your Message</label>
-                    <i class="formulario__validacion-estado bx bx-x-circle"></i>
+           <form class="formulario" id="formulario">
+                <!-- NOMBRE -->
+                <div class="formulario__grupo" id="grupo__nombre">
+                    <div class="formulario__grupo-input"> 
+                        <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder=" ">
+                        <label for="nombre" class="formulario__label">Name or Names</label>
+                        <i class="formulario__validacion-estado bx"></i>
+                    </div>
+                    <span class="formulario__input-error">4 a 16 dígitos, solo letras.</span>
                 </div>
-                <span class="formulario__input-error">El mensaje debe tener entre 10 y 200 caracteres.</span>
-            </div>
 
-            <div class="formulario__mensaje" id="formulario__mensaje">
-                <p>
-                    <i class='bx bx-error'></i></i><b>Error: </b>Favor de rellenar el formulario
-                    correctamente
-                </p>
-            </div>
+                <!-- APELLIDO (Antes se llamaba igual que nombre) -->
+                <div class="formulario__grupo" id="grupo__apellido">
+                    <div class="formulario__grupo-input"> 
+                        <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder=" ">
+                        <label for="apellido" class="formulario__label">Last Name</label>
+                        <i class="formulario__validacion-estado bx"></i>
+                    </div>
+                    <span class="formulario__input-error">4 a 16 dígitos, solo letras.</span>
+                </div>
 
+                <!-- EMAIL -->
+                <div class="formulario__grupo" id="grupo__email">
+                    <div class="formulario__grupo-input"> 
+                        <input type="email" class="formulario__input" name="email" id="email" placeholder=" ">
+                        <label for="email" class="formulario__label">Enter Your Email</label>
+                        <i class="formulario__validacion-estado bx"></i>
+                    </div>
+                    <span class="formulario__input-error">Formato de correo no válido.</span>
+                </div>
 
-            <div class="formulario__grupo formulario__grupo-btn-enviar">
-                <button type="submit" class="formulario__btn">Submit</button>
-                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente</p>
-            </div>
+                <!-- MENSAJE (Textarea) -->
+                <div class="formulario__grupo" id="grupo__mensaje">
+                    <div class="formulario__grupo-input">
+                        <textarea name="mensaje" id="mensaje" class="formulario__input" placeholder=" "></textarea>
+                        <label for="mensaje" class="formulario__label">Enter Your Message</label>
+                        <i class="formulario__validacion-estado bx"></i>
+                    </div>
+                    <span class="formulario__input-error">Entre 10 y 200 caracteres.</span>
+                </div>
 
+                <!-- BOTÓN Y MENSAJES -->
+                <div class="formulario__mensaje" id="formulario__mensaje">
+                    <p><i class='bx bx-error'></i> <b>Error:</b> Rellena el formulario correctamente.</p>
+                </div>
+
+                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                    <button type="submit" class="formulario__btn">Submit</button>
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Enviado exitosamente</p>
+                </div>
             </form>
 
         </section>

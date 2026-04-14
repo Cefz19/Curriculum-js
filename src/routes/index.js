@@ -5,6 +5,7 @@ import PorfolioPDF from '../pages/docs/PorfolioPDF';
 import SpinningCards from '../pages/components/molecules/SpinningCards';
 import { ImgSpinningData } from "../data/moleculesData/SpinningData";
 import { PorfolioDataPDF } from "../data/docsData/PorfolioData";
+import { initContactForm } from "../insfrastruture/UI/scripts/ContactForm";
 
 const router = () => {
   const content = document.getElementById("content");
@@ -45,7 +46,10 @@ const router = () => {
     content.innerHTML = Layout();
 
     requestAnimationFrame(() => {
-      // Inicializar Typed (ya existe .text en Home porque Layout lo insertó)
+      
+     // Inicializar Typed (ya existe .text en Home porque Layout lo insertó)
+     initContactForm();
+
       initializeTyped();
       initSectionAnimations();
 
