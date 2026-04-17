@@ -7,7 +7,7 @@ export const campos = {
 
 export const toggleCampoEstado = (esValido, campo) => {
     const grupo = document.getElementById(`grupo__${campo}`);
-    const icono = document.querySelector(`#grupo__${campo} .formulario__validacion-estado`); // Usa la clase del SCSS
+    const icono = document.querySelector(`#grupo__${campo} .formulario__validacion-estado`); 
 
     if (grupo && icono) {
         if (esValido) {
