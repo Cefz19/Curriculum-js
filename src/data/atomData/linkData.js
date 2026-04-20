@@ -9,11 +9,11 @@ export const LinkData = [
     },
     {
         link: '#details/html_css_js',
-        title: 'Repositorio',
+        title: 'Aprender mas',
     },
     {
         link: '#details/angular',
-        title: 'Repositorio',
+        title: 'Aprender mas',
     },
     {
         link: '#details/flutter',

@@ -16,6 +16,8 @@ const {
   fTipografia,
   fRetro,
   fBenef,
+
+  aStore
   
 } = createPhoto();
 
@@ -55,10 +57,10 @@ export const ImgSpinningData = {
   ],
   angular: [
     {
-      src: fProject.src,
+      src: aStore.src,
       title: "Tienda online",
-      description: "Mostrar Productos para hacer compras online de con entregas",
-      details: "Detalles",
+      description: "Mostrar Productos para hacer compras online",
+      details: "https://cefz19.github.io/MyStore/home",
     },
   ],
 

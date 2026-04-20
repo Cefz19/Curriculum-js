@@ -14,6 +14,8 @@ import FTipografia from "../../assets/imgs/tipografia.webp";
 import FRetroalimentacion from "../../assets/imgs/retroalimentacion.webp";
 import FBeneficios from "../../assets/imgs/beneficios.webp";
 
+import Astore from "../../assets/imgs/store.webp";
+
 
 
 
@@ -35,6 +37,8 @@ const PhotoGalleryView = {
     fTipografia: { src: FTipografia, alt: "tipograf" },
     fRetro: { src: FRetroalimentacion, alt: "retroalim" },
     fBenef: { src: FBeneficios, alt: "benefic" },
+
+    aStore: { src: Astore, alt: "store" },
   }),
 };
 
